@@ -22,17 +22,14 @@ const MkFooter: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold tracking-tighter text-white font-display group-hover:text-amber transition-colors">
-                  {t('brand.name')}
-                </span>
-                <span className="text-[10px] text-amber/80 uppercase tracking-[0.3em] font-black -mt-1">
-                  {t('brand.subtitle')}
+                  MK <span className="text-amber">HUKUK</span>
                 </span>
               </div>
             </Link>
-            <p className="text-sm text-white/40 leading-relaxed">
+            <p className="text-sm text-white/70 leading-relaxed">
               {t('footer.desc')}
             </p>
-            <div className="flex flex-col gap-2.5 text-sm text-white/35">
+            <div className="flex flex-col gap-2.5 text-sm text-white/60">
               <a href="mailto:info@avmahmutkaya.com.tr" className="flex items-center gap-2 hover:text-amber transition-colors">
                 <Mail size={14} className="text-amber/60" /> info@avmahmutkaya.com.tr
               </a>
@@ -53,7 +50,7 @@ const MkFooter: React.FC = () => {
             <ul className="space-y-3.5 text-sm text-white/40">
               <li><Link to="/hakkimizda" className="hover:text-amber transition-colors">{t('nav.about')}</Link></li>
               <li><Link to="/hizmetler" className="hover:text-amber transition-colors">{t('nav.services')}</Link></li>
-              <li><Link to="/blog" className="hover:text-amber transition-colors">{t('nav.blog')}</Link></li>
+              <li><Link to="/yayinlar" className="hover:text-amber transition-colors">{t('nav.blog')}</Link></li>
               <li><Link to="/iletisim" className="hover:text-amber transition-colors">{t('footer.legal')}</Link></li>
               <li><Link to="/yargitay-kararlari" className="hover:text-amber transition-colors">Yargıtay Kararları</Link></li>
             </ul>
@@ -96,8 +93,8 @@ const MkFooter: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/25">© {new Date().getFullYear()} {t('footer.rights')}</p>
-          <div className="flex gap-8 text-xs text-white/25">
+          <p className="text-xs text-white/50">© {new Date().getFullYear()} {t('footer.rights')}</p>
+          <div className="flex gap-8 text-xs text-white/50">
             <span className="hover:text-amber cursor-pointer transition-colors">{t('footer.privacy')}</span>
             <span className="hover:text-amber cursor-pointer transition-colors">{t('footer.terms')}</span>
             <span className="hover:text-amber cursor-pointer transition-colors">{t('footer.kvkk')}</span>

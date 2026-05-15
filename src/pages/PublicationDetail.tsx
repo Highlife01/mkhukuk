@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Calendar, User, Clock, ArrowLeft, Share2, Facebook, Twitter, Linkedin, Loader2 } from 'lucide-react';
+import { Calendar, User, Clock, ArrowLeft, Share2, Loader2, ExternalLink, Globe, MessageCircle } from 'lucide-react';
 import { collection, query, where, getDocs, limit } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { blogPosts as staticBlogPosts } from '@/data/blogPosts';
@@ -138,13 +138,13 @@ const PublicationDetail = () => {
               <span className="text-sm font-bold text-foreground/40 uppercase tracking-widest">Paylaş:</span>
               <div className="flex gap-3">
                 <button className="w-10 h-10 rounded-xl bg-secondary hover:bg-amber hover:text-amber-foreground transition-all flex items-center justify-center shadow-sm">
-                  <Facebook size={18} />
+                  <Globe size={18} />
                 </button>
                 <button className="w-10 h-10 rounded-xl bg-secondary hover:bg-amber hover:text-amber-foreground transition-all flex items-center justify-center shadow-sm">
-                  <Twitter size={18} />
+                  <MessageCircle size={18} />
                 </button>
                 <button className="w-10 h-10 rounded-xl bg-secondary hover:bg-amber hover:text-amber-foreground transition-all flex items-center justify-center shadow-sm">
-                  <Linkedin size={18} />
+                  <ExternalLink size={18} />
                 </button>
                 <button className="w-10 h-10 rounded-xl bg-secondary hover:bg-amber hover:text-amber-foreground transition-all flex items-center justify-center shadow-sm">
                   <Share2 size={18} />

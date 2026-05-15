@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { key: '/', label: t('nav.home'), icon: <Landmark size={14} /> },
     { key: '/hakkimizda', label: t('nav.about'), icon: <Building size={14} /> },
     { key: '/hizmetler', label: t('nav.services'), icon: <Briefcase size={14} /> },
-    { key: '/blog', label: t('nav.blog'), icon: <FileText size={14} /> },
+    { key: '/yayinlar', label: t('nav.blog'), icon: <FileText size={14} /> },
     { key: '/sss', label: t('nav.faq'), icon: <HelpCircle size={14} /> },
     { key: '/iletisim', label: t('nav.contact'), icon: <Send size={14} /> },
     { key: '/ai-asistan', label: t('nav.aiAssistant'), icon: <Sparkles size={14} /> },
@@ -93,45 +93,45 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div className="min-h-screen bg-background font-body text-foreground">
       {/* ─── NAVIGATION ─── */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-700 ease-in-out ${
           isScrolled
-            ? 'bg-nav/95 backdrop-blur-xl shadow-lg'
-            : 'bg-nav'
+            ? 'top-4 w-[95%] lg:w-[85%] glass-card rounded-[2rem] py-3 shadow-2xl backdrop-blur-md bg-white/70 border border-white/20'
+            : 'top-0 w-full bg-nav-solid py-6'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-[72px]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-4 cursor-pointer group shrink-0">
+            <Link 
+              to="/" 
+              className="flex items-center gap-4 group perspective-1000"
+              onClick={() => setIsMenuOpen(false)}
+            >
               <div className="relative">
-                <div className="bg-amber p-2.5 rounded-xl group-hover:scale-110 transition-all duration-500 shadow-lg shadow-amber/20">
-                  <Scale className="text-[#0f1e3d] w-6 h-6" />
+                <div className="bg-amber p-3 rounded-2xl group-hover:rotate-y-12 transition-all duration-500 shadow-xl shadow-amber/20 gold-shimmer">
+                  <Scale className="text-nav w-7 h-7" />
                 </div>
-                <div className="absolute -bottom-1 -right-1 bg-[#0f1e3d] text-amber text-[8px] font-black px-1 rounded-sm border border-amber/30">MK</div>
+                <div className="absolute -bottom-1 -right-1 bg-white text-nav text-[9px] font-black px-1.5 py-0.5 rounded-lg border border-amber/30 shadow-sm">MK</div>
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold tracking-tighter text-white font-display group-hover:text-amber transition-colors">
-                  {t('brand.name')}
-                </span>
-                <span className="text-[10px] text-amber/80 uppercase tracking-[0.3em] font-black -mt-1">
-                  {t('brand.subtitle')}
+                <span className={`text-2xl font-black tracking-tighter transition-colors font-display ${isScrolled ? 'text-nav' : 'text-white'} group-hover:text-amber`}>
+                  MK <span className="text-amber">HUKUK</span>
                 </span>
               </div>
             </Link>
 
-            {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center gap-0.5">
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center gap-10">
               {navItems.map((item) => (
                 <Link
                   key={item.key}
                   to={item.key}
-                  className={`px-4 py-2 rounded-lg text-[13px] font-medium transition-all duration-200 flex items-center gap-1.5 ${
-                    location.pathname === item.key
-                      ? 'text-amber bg-amber/10'
-                      : 'text-white/60 hover:text-white hover:bg-white/5'
+                  className={`text-sm font-bold tracking-wide uppercase transition-all duration-300 hover:text-amber relative group ${
+                    isScrolled ? 'text-nav/70' : 'text-white/80'
                   }`}
                 >
                   {item.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
             </div>

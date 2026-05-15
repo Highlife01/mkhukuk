@@ -167,6 +167,14 @@ const SupremeCourtDecisions = () => {
     setSelectedYear('Tümü');
   };
 
+  const formatPDFText = (text: string) => {
+    return text; 
+  };
+
+  const titleParts = (t('decisions.title') || 'Yargıtay Kararları').split(' ');
+  const firstWord = titleParts[0];
+  const restOfTitle = titleParts.slice(1).join(' ');
+
   return (
     <div className="min-h-screen bg-background pb-20">
       {/* Premium Header */}
@@ -185,10 +193,10 @@ const SupremeCourtDecisions = () => {
           </div>
           
           <h1 className="text-3xl md:text-5xl font-black text-white font-display uppercase tracking-tight leading-tight">
-            {t('decisions.title').split(' ').slice(0, 1).join(' ')} <span className="gradient-text italic">{t('decisions.title').split(' ').slice(1).join(' ')}</span>
+            {firstWord} <span className="gradient-text italic">{restOfTitle}</span>
           </h1>
           
-          <p className="text-sm md:text-base text-white/50 leading-relaxed font-body max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-white/80 leading-relaxed font-body max-w-2xl mx-auto">
             {t('decisions.desc')}
           </p>
 

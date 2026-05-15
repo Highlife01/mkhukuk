@@ -1,58 +1,154 @@
 @import "tailwindcss";
 
+@theme {
+  --color-amber: #c7a157;
+  --color-amber-light: #d4b36c;
+  --color-amber-dark: #a8873e;
+  --color-nav: #071a33;
+  --color-background: #f7f4ee;
+  --color-foreground: #0b1f3a;
+  --color-card: #ffffff;
+  --color-border: #e2ddd3;
+  --color-muted: #64748b;
+  
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+  
+  --shadow-nav: 0 10px 40px -10px rgba(7, 26, 51, 0.5);
+  --shadow-amber: 0 4px 14px -4px rgba(199, 161, 87, 0.4);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #f7f4ee;
+    color: #0b1f3a;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Navbar'ın her zaman görünür olması için zorlayıcı sınıflar */
+  .bg-nav-solid {
+    background-color: #071a33 !important;
+  }
+  .bg-nav-glass {
+    background-color: rgba(7, 26, 51, 0.95) !important;
+    backdrop-filter: blur(12px);
+  }
+  
+  /* Amber renklerini manuel tanımlayalım (v4 bazen kaçırabiliyor) */
+  .text-amber-gold { color: #c7a157; }
+  .bg-amber-gold { background-color: #c7a157; }
+  .border-amber-gold { border-color: #c7a157; }
+}
+
+/* Sayfa geçiş animasyonları */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* === ULTRA PREMIUM DESIGN SYSTEM === */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(199, 161, 87, 0.08);
+}
+
+.gold-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.gold-shimmer::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 20%,
+    rgba(199, 161, 87, 0.1) 40%,
+    rgba(199, 161, 87, 0.3) 50%,
+    rgba(199, 161, 87, 0.1) 60%,
+    transparent 80%
+  );
+  transform: rotate(25deg);
+  animation: shimmer 4s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(100%) rotate(25deg); }
+}
+
+.premium-shadow {
+  box-shadow: 0 20px 40px -10px rgba(7, 26, 51, 0.08), 
+              0 10px 20px -5px rgba(199, 161, 87, 0.04);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Smooth Scrolling & Smooth Transitions */
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
-body {
-  margin: 0;
-  background: #f7f4ee;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+.page-transition {
+  animation: pageFade 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-button,
-input,
-textarea,
-select {
-  font: inherit;
+@keyframes pageFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-button {
-  cursor: pointer;
+.gold-glow:hover {
+  box-shadow: 0 0 25px rgba(199, 161, 87, 0.4);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
 }
 
-::selection {
-  background: rgba(199, 161, 87, 0.28);
+/* === Utility Classes === */
+.gradient-text {
+  background: linear-gradient(135deg, #c7a157 0%, #a8873e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-@keyframes panel-in {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.animation-delay-150 { animation-delay: 150ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-500 { animation-delay: 500ms; }
+.animation-delay-700 { animation-delay: 700ms; }
+
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
 }
 
-@keyframes live-pulse {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(199, 161, 87, 0.45);
-  }
-  50% {
-    box-shadow: 0 0 0 8px rgba(199, 161, 87, 0);
-  }
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-@keyframes line-grow {
-  from {
-    transform: scaleX(0.25);
-    transform-origin: left;
-  }
-  to {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
 }

@@ -101,7 +101,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   return (
     <AuthContext.Provider value={{ user, profile, loading, logout }}>
-      {!loading && children}
+      {loading ? (
+        <div className="min-h-screen bg-[#071a33] flex flex-col items-center justify-center text-white">
+          <div className="w-16 h-16 border-4 border-amber/20 border-t-amber rounded-full animate-spin"></div>
+          <div className="mt-6 font-medium tracking-widest text-xs uppercase text-amber/60">MK Hukuk Güvenlik Kontrolü</div>
+        </div>
+      ) : (
+        children
+      )}
     </AuthContext.Provider>
   );
 };
