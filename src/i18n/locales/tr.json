@@ -1,0 +1,517 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetlerimiz",
+    "blog": "Blog",
+    "faq": "S.S.S.",
+    "aiAssistant": "Hukuki Asistan",
+    "database": "Yargıtay DB",
+    "tools": "Hukuk Araçları",
+    "glossary": "Sözlük",
+    "contact": "İletişim",
+    "login": "Giriş"
+  },
+  "brand": {
+    "name": "MK HUKUK | AV. MAHMUT KAYA",
+    "subtitle": "Hukuk & Danışmanlık"
+  },
+  "home": {
+    "contact": {
+      "badge": "Hukuki Danışmanlık",
+      "title1": "Bize Ulaşın,",
+      "title2": "Sürecinizi Birlikte Yönetelim.",
+      "desc": "Hukuki sorularınız veya davanızla ilgili ön değerlendirme almak için formu doldurun. Uzman avukatlarımız en kısa sürede size geri dönüş yapacaktır.",
+      "phoneLabel": "Telefon",
+      "emailLabel": "E-posta",
+      "formTitle": "Mesaj Gönderin",
+      "formDesc": "Tüm alanları eksiksiz doldurarak bize ulaşabilirsiniz.",
+      "successTitle": "Mesajınız Alındı!",
+      "successDesc": "En kısa sürede iletişim kanallarımız üzerinden size dönüş yapacağız.",
+      "errorTitle": "Bir Hata Oluştu",
+      "errorDesc": "Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin.",
+      "namePlaceholder": "Adınız Soyadınız *",
+      "phonePlaceholder": "Telefon Numaranız",
+      "emailPlaceholder": "E-posta Adresiniz *",
+      "subjectPlaceholder": "Konu",
+      "messagePlaceholder": "Mesajınız *",
+      "submittingBtn": "Gönderiliyor...",
+      "submitBtn": "Formu Gönder",
+      "kvkkNote": "Gönder butonuna tıklayarak KVKK Aydınlatma Metnini okuduğunuzu ve kabul ettiğinizi onaylamış olursunuz."
+    },
+    "badge": "Av. Mahmut Kaya Hukuk & Danışmanlık",
+    "heroTitle1": "Profesyonel",
+    "heroTitle2": "Hukuki Çözümler",
+    "heroDesc": "15 yıllık tecrübemiz ve uzman avukat kadromuzla, dijital altyapımızın hızıyla birleşen en güvenilir hukuki desteği sunuyoruz.",
+    "ctaAi": "ÖN DEĞERLENDİRME AL",
+    "ctaServices": "FAALİYET ALANLARI",
+    "aiBadge": "İLERİ TEKNOLOJİ ALTYAPISI",
+    "aiTitle1": "Hızlı ve Etkin",
+    "aiTitle2": "Dosya Yönetimi",
+    "aiDesc": "Büromuzun sahip olduğu dijital altyapı ve yapay zeka desteği ile",
+    "aiDescBold": " saniyeler içinde hukuki analiz ",
+    "aiDescEnd": "yaparak süreçlerinizi en hızlı şekilde sonuçlandırıyoruz.",
+    "aiFeature1": "Hızlı Mevzuat Taraması",
+    "aiFeature2": "2M+ Emsal Karar Havuzu",
+    "aiFeature3": "Dijital Dosya Takibi",
+    "aiFeature4": "7/24 İletişim Altyapısı",
+    "startChat": "Hemen Başlat",
+    "servicesBadge": "UZMANLIK ALANLARIMIZ",
+    "servicesTitle": "Kapsamlı Hukuki Çözümler",
+    "service1Title": "Aile ve Boşanma",
+    "service1Desc": "Boşanma, velayet ve mal paylaşımı süreçlerinde hassas ve profesyonel destek.",
+    "service2Title": "İş ve Sosyal Güvenlik",
+    "service2Desc": "Tazminat, işe iade ve işçi-işveren uyuşmazlıklarında uzman çözümler.",
+    "service3Title": "Gayrimenkul Hukuku",
+    "service3Desc": "Tapu, kira ve inşaat projeleriyle ilgili tüm hukuki danışmanlık süreçleri.",
+    "service4Title": "Ceza Hukuku",
+    "service4Desc": "Ağır ceza ve soruşturma aşamalarında profesyonel savunma hizmetleri.",
+    "service5Title": "Bilişim ve Teknoloji",
+    "service5Desc": "Siber suçlar, e-ticaret ve dijital varlıkların korunmasında uzmanlık.",
+    "service6Title": "İcra ve İflas",
+    "service6Desc": "Alacak tahsili, haciz ve borç yapılandırma süreçlerinin yönetimi.",
+    "service7Title": "Tüketici Hukuku",
+    "service7Desc": "Ayıplı mal, hizmet ve tüketici hakem heyeti süreçlerinde tam destek.",
+    "service8Title": "Sözleşme Yönetimi",
+    "service8Desc": "Ticari ve bireysel sözleşmelerin hazırlanması, incelenmesi ve tashihi.",
+    "details": "Detayları Gör",
+    "stats": {
+      "decisions": "15+ Yıl Tecrübe",
+      "users": "2500+ Başarılı Dosya",
+      "lawyers": "5 Uzman Avukat",
+      "success": "28+ Uzmanlık Alanı"
+    }
+  },
+  "whatsapp": {
+    "title": "WhatsApp Hukuki Asistan",
+    "badge": "YENİ",
+    "desc": "Av. Mahmut Kaya hukuk asistanınız artık WhatsApp üzerinden cebinizde. Aşağıdaki hizmetlerden dilediğinizi seçerek hemen kullanmaya başlayabilirsiniz.",
+    "option1Title": "Hukuki Destek Alma",
+    "option1Desc": "Hukuki sorularınız için anında uzman desteği alın",
+    "option2Title": "Yargıtay ve BAM Kararı Arama",
+    "option2Desc": "Emsal kararlar ve içtihatlar için arama yapın",
+    "option3Title": "Dava Dilekçesi Hazırlama",
+    "option3Desc": "Yapay zeka ile hızlı ve profesyonel dilekçeler oluşturun",
+    "option4Title": "Sözleşme Hazırlama",
+    "option4Desc": "Özelleştirilmiş sözleşme şablonları oluşturun",
+    "btnStart": "WhatsApp'ta Başla"
+  },
+  "decisions": {
+    "badge": "İçtihat Veritabanı",
+    "title": "Yargıtay Kararları",
+    "desc": "Hukukun evrensel ilkeleri ve Yargıtay'ın güncel içtihatları ile güçlendirilen, Türkiye'nin en kapsamlı karar arama motoru.",
+    "searchPlaceholder": "Karar içeriği, daire, esas no veya anahtar kelime ile arayın...",
+    "btnSearch": "Ara",
+    "filterTitle": "Filtrele",
+    "filterChambers": "Daireler",
+    "filterYear": "Yıl",
+    "filterClear": "Filtreleri Temizle",
+    "ctaTitle": "Detaylı Analiz mi Lazım?",
+    "ctaDesc": "AI asistanımız ile kararları saniyeler içinde analiz edin ve özetleyin.",
+    "ctaBtn": "AI Asistanı Aç",
+    "listHeading": "Karar Listeleniyor",
+    "sortBy": "Sıralama: Yeni Gelenler",
+    "viewContent": "Karar Metnini Görüntüle",
+    "downloadPdf": "PDF İndir",
+    "noResults": "Sonuç Bulunamadı",
+    "noResultsDesc": "Aradığınız kriterlere uygun Yargıtay kararı bulunamadı. Lütfen farklı anahtar kelimeler deneyin.",
+    "stats": {
+      "total": "Toplam Karar",
+      "weekly": "Haftalık Güncelleme",
+      "speed": "Arama Hızı",
+      "accuracy": "Doğruluk Oranı"
+    }
+  },
+  "services_page": {
+    "badge": "Faaliyet Alanları",
+    "title1": "Uzmanlık ",
+    "title2": "Alanlarımız",
+    "stat1": "Faaliyet Alanı",
+    "stat2": "Başarılı Dava",
+    "stat3": "Yıllık Deneyim",
+    "allAreas": "Tüm Alanlar",
+    "featuredAreas": "Öne Çıkan Uzmanlık Alanları",
+    "allAreasSub": "Tüm Faaliyet Alanları",
+    "detailBtn": "İncele",
+    "whyUsTitle": "Neden ",
+    "whyUsTitleSpan": "Av. Mahmut Kaya",
+    "whyUsDesc": "Deneyimli kadromuz, teknoloji odaklı yaklaşımımız ve müvekkil memnuniyeti odaklı hizmet anlayışımızla hukuki süreçlerinizi güvenle yönetiyoruz.",
+    "whyUsPoint1": "Her alanda uzmanlaşmış 20+ yıllık deneyimli avukat kadrosu",
+    "whyUsPoint2": "AI destekli hukuki analiz ve ön değerlendirme",
+    "whyUsPoint3": "Şeffaf süreç takibi ve düzenli bilgilendirme",
+    "whyUsPoint4": "Sonuç odaklı strateji ve hızlı müdahale",
+    "whyUsPoint5": "Ulusal ve uluslararası hukuk ağı",
+    "freeConsultTitle": "Ücretsiz Ön Değerlendirme",
+    "freeConsultDesc": "Hukuki süreciniz hakkında ücretsiz ön değerlendirme almak için bizimle iletişime geçin.",
+    "aiStartBtn": "AI Asistanla Başla",
+    "title": "Uzmanlık Alanlarımız",
+    "desc": "Av. Mahmut Kaya olarak, global standartlarda ve yerel tecrübeyle geniş bir yelpazede hukuki danışmanlık hizmeti sunmaktayız.",
+    "ctaTitle": "Hukuki Yardıma mı İhtiyacınız Var?",
+    "ctaDesc": "Uzman kadromuzla, ticari ve şahsi tüm hukuki süreçlerinizde inovatif çözümler üretiyoruz.",
+    "ctaBtnConsult": "Bir Avukata Danışın",
+    "ctaBtnContact": "Bize Ulaşın"
+  },
+  "services_list": {
+    "banking": {
+      "title": "Bankacılık ve Finans",
+      "desc": "Kredi sözleşmeleri, proje finansmanı ve bankacılık mevzuatı uyum süreçleri."
+    },
+    "mergers": {
+      "title": "Birleşme ve Devralmalar",
+      "desc": "Şirket birleşmeleri, hisse devirleri ve due diligence süreçlerinin yönetimi."
+    },
+    "energy": {
+      "title": "Enerji & Altyapı",
+      "desc": "Enerji projeleri, tasfiye, lisanslama ve altyapı yatırımları hukuki desteği."
+    },
+    "esg": {
+      "title": "ESG & Sürdürülebilirlik",
+      "desc": "Sürdürülebilirlik raporlaması ve ESG kriterlerine uyum danışmanlığı."
+    },
+    "ip": {
+      "title": "Fikri Mülkiyet",
+      "desc": "Marka, patent, telif hakları ve teknoloji transferi sözleşmeleri."
+    },
+    "fintech": {
+      "title": "Fintek & Dijital Para",
+      "desc": "Ödeme sistemleri, blokzincir, kripto varlıklar ve finansal regülasyonlar."
+    },
+    "realestate": {
+      "title": "Gayrimenkul Hukuku",
+      "desc": "Taşınmaz alım-satımı, tapu incelemeleri ve inşaat hukuku uzmanlığı."
+    },
+    "labor": {
+      "title": "İş ve Sosyal Güvenlik",
+      "desc": "Bireysel ve toplu iş hukuku, sözleşme yönetimi ve uyuşmazlık çözümü."
+    },
+    "equity": {
+      "title": "Özel Sermaye Fonları",
+      "desc": "Fon kurulumu, yatırım yönetimi ve çıkış stratejileri danışmanlığı."
+    },
+    "competition": {
+      "title": "Rekabet Hukuku",
+      "desc": "Rekabet kurumu bildirimleri, muafiyet başvuruları ve rekabet ihlalleri."
+    },
+    "health": {
+      "title": "Sağlık ve İlaç Hukuku",
+      "desc": "İlaç ve tıbbi cihaz mevzuatı, malpraktis davaları ve sağlık regülasyonları."
+    },
+    "capital": {
+      "title": "Sermaye Piyasası",
+      "desc": "Halka arz, ihraç süreçleri ve SPK mevzuatına uyum danışmanlığı."
+    },
+    "corporate": {
+      "title": "Şirketler & Ticaret",
+      "desc": "Genel kurul süreçleri, yönetim kurulu sorumlulukları ve kurumsal yapılandırma."
+    },
+    "compliance": {
+      "title": "Uyum ve Etik",
+      "desc": "Yolsuzlukla mücadele, iç soruşturmalar ve etik kurallara uyum süreçleri."
+    },
+    "intltrade": {
+      "title": "Uluslararası Ticaret",
+      "desc": "Gümrük mevzuatı, ithalat-ihracat rejimleri ve uluslararası sözleşmeler."
+    },
+    "dispute": {
+      "title": "Uyuşmazlık Çözümü",
+      "desc": "Dava takibi, tahkim süreçleri ve alternatif uyuşmazlık çözüm yöntemleri."
+    },
+    "tax": {
+      "title": "Vergi ve Gümrük",
+      "desc": "Vergi planlaması, vergi davaları ve uluslararası vergilendirme stratejileri."
+    },
+    "kvkk": {
+      "title": "KVKK & Veri Gizliliği",
+      "desc": "Kişisel verilerin korunması uyum süreçleri, veri işleme politikaları."
+    },
+    "wealth": {
+      "title": "Varlık Yönetimi",
+      "desc": "Aile şirketleri anayasası, miras planlaması ve varlık yapılandırma."
+    },
+    "whitecollar": {
+      "title": "Beyaz Yaka Suçları",
+      "desc": "Yolsuzlukla mücadele, iç denetimler ve ekonomik ceza hukuku."
+    },
+    "family": {
+      "title": "Aile & Boşanma",
+      "desc": "Anlaşmalı ve çekişmeli boşanma, velayet, nafaka ve mal paylaşımı."
+    },
+    "criminal": {
+      "title": "Ceza Yargılaması",
+      "desc": "Ağır ceza davaları, soruşturma takibi ve profesyonel savunma."
+    },
+    "inheritance": {
+      "title": "Miras & Vasiyet",
+      "desc": "Vasiyetname hazırlama, miras paylaşımı, tenkis ve reddi miras."
+    },
+    "execution": {
+      "title": "İcra & İflas",
+      "desc": "Alacak tahsili, icra takipleri, ihtiyati haciz ve iflas erteleme."
+    },
+    "maritime": {
+      "title": "Deniz Ticareti",
+      "desc": "Gemi alım-satımı, navlun sözleşmeleri ve deniz kazaları hukuku."
+    },
+    "it": {
+      "title": "Bilişim & Yazılım",
+      "desc": "E-ticaret, siber suçlar ve yazılım lisans sözleşmeleri uzmanlığı."
+    },
+    "insurance": {
+      "title": "Sigorta Hukuku",
+      "desc": "Tazminat talepleri, rücu davaları ve sigorta poliçe uyuşmazlıkları."
+    },
+    "aviation": {
+      "title": "Hukuk ve Havacılık",
+      "desc": "Hava taşıma sözleşmeleri ve havacılık regülasyonları danışmanlığı."
+    }
+  },
+  "about": {
+    "journey": {
+      "title": "Yolculuğumuz",
+      "m1": "Av. Mahmut Kaya bürosu kuruldu",
+      "m2": "Gayrimenkul ve ticaret hukuku alanlarında genişleme",
+      "m3": "Dijital hukuk danışmanlık platformu lansmanı",
+      "m4": "AI destekli hukuk asistanı entegrasyonu",
+      "m5": "500+ başarılı dava ile sektör liderliği"
+    },
+    "mission": {
+      "item1": "Teknoloji ve hukukun birlikte gücünü kullanmak",
+      "item2": "Müvekkil memnuniyetini en üst düzeyde tutmak",
+      "item3": "Şeffaf ve adil bir hukuki süreç sunmak"
+    },
+    "workWithUs": {
+      "title": "Bizimle Çalışın",
+      "desc": "Hukuki süreçlerinizde deneyimli ekibimizle yanınızdayız.",
+      "contactBtn": "İletişime Geçin",
+      "servicesBtn": "Hizmetlerimiz"
+    },
+    "badge": "Hakkımızda",
+    "title1": "2010'dan Beri",
+    "title2": "Hukukta Öncü",
+    "desc": "Av. Mahmut Kaya Hukuk & Danışmanlık, kuruluşundan bu yana Türkiye'nin ve dünyanın önde gelen yerli ve yabancı şirketlerine, finans kuruluşlarına ve bireysel müvekkillerine kapsamlı hukuki danışmanlık hizmeti sunmaktadır.",
+    "stats": {
+      "exp": "15+",
+      "expLabel": "Yıllık Tecrübe",
+      "lawyers": "5",
+      "lawyersLabel": "Uzman Avukat"
+    },
+    "valuesTitle": "Değerlerimiz",
+    "values": {
+      "v1": {
+        "title": "Dürüstlük & Şeffaflık",
+        "desc": "Müvekkillerimizle kurduğumuz her ilişkide dürüstlük ve mutlak şeffaflık ilkesini benimsiyoruz."
+      },
+      "v2": {
+        "title": "Mükemmeliyetçilik",
+        "desc": "En karmaşık hukuki sorunlara, en yüksek profesyonel standartlarda inovatif çözümler üretiyoruz."
+      },
+      "v3": {
+        "title": "Çeşitlilik",
+        "desc": "Farklı bakış açılarının ve kapsayıcı bir çalışma ortamının başarımızın anahtarı olduğuna inanıyoruz."
+      },
+      "v4": {
+        "title": "Müvekkil Odaklılık",
+        "desc": "Faliyetlerimizin odağında her zaman müvekkillerimizin stratejik hedefleri ve güvenliği yer alır."
+      }
+    },
+    "missionTitle": "Küresel Vizyon, Yerel Güç",
+    "missionDesc": "\"Vizyonumuz; müvekkillerimizin ihtiyaçlarını gelişen dünya standartlarına uyumlu hale getirerek, Türkiye'nin her hukuki ihtiyaca en yüksek seviyede cevap verebilen lider hukuk bürosu kavramını sürdürmektir.\""
+  },
+  "faq": {
+    "badge": "Bilgi Destek",
+    "title": "Sıkça Sorulan Sorular",
+    "desc": "Hukuki süreçlerinizle ilgili en çok merak edilen soruları ve şeffaf çalışma prensiplerimizi burada bulabilirsiniz.",
+    "questions": {
+      "q1": {
+        "q": "Hangi hukuk alanlarında uzmanlaşmış hizmet sunuyorsunuz?",
+        "a": "Av. Mahmut Kaya olarak geniş bir yelpazede hizmet veriyoruz. Başta kurumsal şirketler hukuku, gayrimenkul hukuku, aile ve boşanma davaları, ceza hukuku, miras paylaşımları ve teknoloji hukuku (KVKK, Fintek) olmak üzere 26 farklı uzmanlık alanında hizmet sunmaktayız."
+      },
+      "q2": {
+        "q": "İlk görüşme nasıl gerçekleşiyor ve ücretli mi?",
+        "a": "Telefon, WhatsApp veya web sitemiz üzerinden randevu aldıktan sonra İstanbul'daki ofisimizde veya online platformlar üzerinden görüntülü görüşme yapıyoruz. Müvekkil adaylarımıza süreçle ilgili genel bilgilendirme yaptığımız ön görüşmelerimiz ücretsizdir."
+      },
+      "q3": {
+        "q": "Avukatlık danışmanlık ücretleri nasıl belirleniyor?",
+        "a": "Ücretlendirme politikamız şeffaftır. Danışmanlık ücretleri davanın türüne, karmaşıklığına ve harcanacak emeğe göre değişmektedir. Türkiye Barolar Birliği ve İstanbul Barosu asgari ücret tarifelerini baz alarak, hizmet sunmadan önce tüm maliyetleri netleştiriyoruz."
+      },
+      "q4": {
+        "q": "Davamın sonuçlanması ne kadar sürer?",
+        "a": "Dava süreleri mahkemenin iş yüküne ve dosyanın niteliğine göre değişir. Yerel mahkeme süreçleri ortalama 8-18 ay arasında sürmektedir. Her duruşma sonrası müvekkillerimizi yazılı raporlarla bilgilendiriyor ve sürecin en hızlı şekilde neticelenmesi için usuli işlemleri titizlikle takip ediyoruz."
+      },
+      "q5": {
+        "q": "Şirketler için sürekli danışmanlık (müşavirlik) hizmetiniz var mı?",
+        "a": "Evet, yerli ve yabancı pek çok şirkete aylık bazda sürekli hukuk müşavirliği hizmeti sunuyoruz. Bu kapsamda sözleşme yönetimi, iş hukuku uyumu, KVKK denetimleri ve genel kurumsal yönetim süreçlerini kapsayan 'boutique' çözümler sağlıyoruz."
+      },
+      "q6": {
+        "q": "Adli yardımdan (ücretsiz avukat) faydalanabilir miyim?",
+        "a": "Ekonomik durumu avukatlık ücretini ödemeye imkan vermeyen kişiler, bulundukları ilin Baro Başkanlığına (Adli Yardım Bürosu) başvurarak ücretsiz avukat tayin edilmesini talep edebilirler. Bu konuda başvuruculara rehberlik hizmeti sunuyoruz."
+      }
+    },
+    "cta1": {
+      "title": "Hemen Arayın",
+      "desc": "Acil hukuki yardıma mı ihtiyacınız var? 7/24 bizlere ulaşabilirsiniz."
+    },
+    "cta2": {
+      "title": "WhatsApp Destek",
+      "desc": "Dosyanızla ilgili hızlı bilgi almak için mesaj gönderebilirsiniz.",
+      "btn": "Mesaj Gönder"
+    }
+  },
+  "guide": {
+    "badge": "Hukuk Rehberi",
+    "title": "Bilgi Merkezi & Rehberler",
+    "searchPlaceholder": "Konu veya anahtar kelime ara...",
+    "back": "Geri Dön",
+    "faq": "Sıkça Sorulan Sorular",
+    "expertTips": "Uzman Tavsiyeleri",
+    "cities": "Şehir Bazlı İlanlar (Arşiv)"
+  },
+  "glossary": {
+    "badge": "Hukuk Sözlüğü",
+    "title": "Detaylı Hukuk Sözlüğü",
+    "subtitle": "Hukuki terimlerin güncel, anlaşılır ve detaylı açıklamaları. Aradığınız terimi kolayca bulabilirsiniz.",
+    "searchPlaceholder": "Sözlükte terim veya açıklama ara...",
+    "termsFound": "terim bulundu.",
+    "relatedTerms": "İlgili Terimler",
+    "noResults": "Aramanızla eşleşen hiçbir hukuki terim bulunamadı."
+  },
+  "database": {
+    "badge": "İçtihat Veritabanı",
+    "title": "Yargıtay Kararları",
+    "readMore": "Kararı İncele"
+  },
+  "footer": {
+    "desc": "Av. Mahmut Kaya Hukuk & Danışmanlık. 15 yıllık tecrübemiz ve uzman kadromuzla hukuki süreçlerinizi en güvenilir ve hızlı şekilde yönetiyoruz.",
+    "quickAccess": "Hızlı Erişim",
+    "corporate": "Kurumsal",
+    "legal": "Yasal",
+    "newsletter": "Bülten",
+    "newsletterDesc": "Hukuk dünyasındaki gelişmeleri takip edin.",
+    "emailPlaceholder": "E-posta adresiniz",
+    "subscribe": "Abone Ol",
+    "rights": "Av. Mahmut Kaya Hukuk & Danışmanlık. Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "kvkk": "KVKK Aydınlatma",
+    "cookies": "Çerez Politikası"
+  },
+  "ai": {
+    "badge": "Yapay Zeka Destekli Hukuk Asistanı",
+    "title": "Av. Mahmut Kaya",
+    "titleHighlight": "AI Asistanı",
+    "desc": "Sorularınızı yazın veya belgelerinizi yükleyin; hukuki analiz ve emsal karar araması yapalım.",
+    "quickTopics": "Hızlı Başlangıç",
+    "topic1": "Boşanma",
+    "topic2": "İşçi Alacakları",
+    "topic3": "Kira Uyuşmazlıkları",
+    "topic4": "Miras Paylaşımı",
+    "topic5": "Tazminat Hesaplama",
+    "topic6": "Sözleşme Analizi",
+    "welcome": "Merhaba! Size nasıl yardımcı olabilirim?",
+    "welcomeExample1": "Maaş alacağımı nasıl hesaplarım?",
+    "welcomeExample2": "Emsal karar bulabilir misin?",
+    "placeholder": "Sorunuzu buraya yazın veya belge sürükleyin...",
+    "disclaimer": "Not: AI Asistan bilgi amaçlıdır; hukuki tavsiye yerine geçmez."
+  },
+  "chat": {
+    "title": "Av. Mahmut Kaya Hukuki Asistan",
+    "online": "Çevrimiçi",
+    "welcome": "Merhaba! Ben Av. Mahmut Kaya dijital asistanı. Hukuki süreçlerinizde size rehberlik edebilirim. Nasıl yardımcı olabilirim?",
+    "welcomeExample2": "Boşanma davası ne kadar sürer? Tazminat haklarım nelerdir?",
+    "placeholder": "Sorunuzu buraya yazın...",
+    "typing": "Yazıyor..."
+  },
+  "dashboard": {
+    "title": "Hukuk Dashboard",
+    "welcome": "Hoş Geldiniz, Avukat",
+    "stats": {
+      "activeCases": "Aktif Dosyalar",
+      "hearings": "Yaklaşan Duruşmalar",
+      "tasks": "Bekleyen Görevler",
+      "clients": "Toplam Müvekkil",
+      "totalRevenue": "Toplam Tahsilat",
+      "pendingReceivables": "Tahsil Edilecek Alacak",
+      "upcomingCriticalCases": "Yaklaşan Kritik Dava",
+      "winRate": "Kazanma Oranı"
+    },
+    "recentActivities": "Son Aktiviteler",
+    "activities": {
+      "caseAdded": "Yeni bir dava dosyası eklendi",
+      "hearingReminder": "Yarınki duruşma için hatırlatma",
+      "documentUploaded": "Yeni bir dilekçe yüklendi",
+      "aiConsult": "AI Asistan ile dosya analizi yapıldı"
+    },
+    "quickActions": {
+      "title": "Hızlı İşlemler",
+      "newCase": "Yeni Dosya Aç",
+      "newClient": "Yeni Müvekkil Ekle",
+      "searchDecisions": "Karar Ara",
+      "aiAnalysis": "AI Analiz",
+      "appointments": "Randevular"
+    },
+    "tabs": {
+      "overview": "Genel Bakış",
+      "chatbot": "Chatbot Yönetimi",
+      "cases": "Dava Yönetimi",
+      "clients": "Müvekkil Yönetimi",
+      "appointments": "Randevu Takvimi",
+      "documents": "Belge Yönetimi",
+      "website": "Web Sayfaları",
+      "blog": "Blog Yönetimi",
+      "seo": "SEO & Analitik",
+      "finance": "Finansal Yönetim",
+      "team": "Ekip Yönetimi",
+      "management": "Hukuki Araçlar"
+    },
+    "tools": {
+      "title": "Hukuki Araçlar Portalı",
+      "subtitle": "Tüm hesaplama ve yönetim araçlarına tek bir noktadan erişin.",
+      "searchPlaceholder": "Araç ara...",
+      "categories": {
+        "calculation": "HESAPLAMA",
+        "labor": "İŞ HUKUKU",
+        "ai": "YAPAY ZEKA",
+        "document": "BELGE"
+      }
+    },
+    "management": {
+      "title": "Site İçerik Yönetimi",
+      "heroSection": "Hero Bölümü (Ana Sayfa)",
+      "servicesSection": "Hizmet Portföyü",
+      "saveBtn": "Değişiklikleri Yayınla",
+      "heroTitle": "Ana Başlık",
+      "heroDesc": "Alt Başlık / Açıklama",
+      "preview": "Canlı Önizleme"
+    },
+    "chatbot": {
+      "title": "Chatbot Yönetimi",
+      "sessions": "Aktif Oturumlar",
+      "configuration": "Chatbot Ayarları",
+      "history": "Mesaj Geçmişi"
+    },
+    "finance": {
+      "title": "Finansal Yönetim",
+      "income": "Bu Ay Gelir",
+      "pending": "Bekleyen Tahsilat",
+      "expenses": "Giderler",
+      "netProfit": "Net Kar"
+    }
+  },
+  "auth": {
+    "success": "Giriş Başarılı! Dashboard'a yönlendiriliyorsunuz.",
+    "error": "Giriş Başarısız. Lütfen bilgilerinizi kontrol edin."
+  },
+  "contact": {
+    "title": "İletişim",
+    "desc": "Hukuki süreçlerinizde size en iyi desteği sağlamak için buradayız. Aşağıdaki form veya iletişim kanalları üzerinden bize ulaşabilirsiniz.",
+    "heroTitle1": "Bizimle İletişime",
+    "heroTitle2": "Geçin",
+    "phoneLabel": "Telefon",
+    "phoneDesc": "Hafta içi 09:00 - 18:00 saatleri arasında randevu ve ön görüşme için arayabilirsiniz.",
+    "emailLabel": "E-posta",
+    "emailDesc": "Dosya gönderimi ve detaylı sorularınız için bize yazın. En geç 24 saat içinde dönüş yapıyoruz.",
+    "whatsappLabel": "WhatsApp Destek",
+    "whatsappDesc": "Acil hukuki destek veya hızlı belge gönderimi için WhatsApp hattımız aktiftir.",
+    "whatsappBtn": "WhatsApp'a Git"
+  }
+}

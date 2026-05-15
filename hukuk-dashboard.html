@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hukuk Portalı — Yönetim Paneli</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --navy: #0f1e3d; --navy-mid: #1a2f55; --navy-light: #243a6b;
+  --gold: #c9a84c; --gold-light: #e2c97e; --gold-dim: #9a7a32;
+  --cream: #f8f5ef; --cream2: #f0ece3;
+  --text-main: #1a1a2e; --text-muted: #6b7280; --text-light: #9ca3af;
+  --border: rgba(201,168,76,0.2); --border-light: rgba(201,168,76,0.1);
+  --success: #1d9e75; --danger: #e24b4a; --warning: #ba7517; --info: #185fa5;
+  --white: #ffffff; --sidebar-width: 240px;
+}
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text-main); min-height: 100vh; font-size: 14px; }
+.layout { display: flex; min-height: 100vh; }
+
+/* SIDEBAR */
+.sidebar { width: var(--sidebar-width); background: var(--navy); display: flex; flex-direction: column; position: fixed; left: 0; top: 0; bottom: 0; z-index: 100; overflow: hidden; }
+.sidebar-brand { padding: 24px 20px 20px; border-bottom: 1px solid rgba(201,168,76,0.15); }
+.brand-icon { width: 36px; height: 36px; background: var(--gold); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+.brand-icon svg { width: 20px; height: 20px; fill: var(--navy); }
+.brand-name { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: #ffffff; line-height: 1.2; }
+.brand-sub { font-size: 10px; color: var(--gold); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+.sidebar-nav { flex: 1; padding: 16px 0; overflow-y: auto; }
+.nav-section { padding: 0 12px; margin-bottom: 4px; }
+.nav-label { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(201,168,76,0.6); padding: 8px 8px 4px; display: block; }
+.nav-item { display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 8px; cursor: pointer; color: rgba(255,255,255,0.78); font-size: 13px; font-weight: 400; transition: all 0.2s; margin-bottom: 2px; border: none; background: none; width: 100%; text-align: left; }
+.nav-item:hover { background: rgba(201,168,76,0.1); color: #ffffff; }
+.nav-item.active { background: rgba(201,168,76,0.15); color: var(--gold-light); border-left: 2px solid var(--gold); margin-left: -2px; padding-left: 12px; }
+.nav-item svg { width: 16px; height: 16px; flex-shrink: 0; }
+.nav-badge { margin-left: auto; background: var(--danger); color: #fff; font-size: 10px; padding: 1px 6px; border-radius: 10px; font-weight: 500; }
+.nav-badge.gold { background: var(--gold); color: var(--navy); }
+.sidebar-footer { padding: 16px; border-top: 1px solid rgba(201,168,76,0.15); }
+.user-card { display: flex; align-items: center; gap: 10px; }
+.user-avatar { width: 34px; height: 34px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 13px; color: var(--navy); flex-shrink: 0; }
+.user-name { font-size: 13px; font-weight: 500; color: #ffffff; }
+.user-role { font-size: 10px; color: rgba(201,168,76,0.8); }
+
+/* MAIN */
+.main { margin-left: var(--sidebar-width); flex: 1; display: flex; flex-direction: column; min-height: 100vh; }
+.topbar { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 28px; height: 60px; display: flex; align-items: center; gap: 16px; position: sticky; top: 0; z-index: 50; }
+.topbar-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; color: var(--navy); flex: 1; }
+.topbar-actions { display: flex; align-items: center; gap: 10px; }
+.icon-btn { width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 8px; background: var(--cream); cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--text-muted); position: relative; transition: all 0.2s; }
+.icon-btn:hover { border-color: var(--gold); color: var(--gold); }
+.icon-btn svg { width: 16px; height: 16px; }
+.notif-dot { position: absolute; top: 6px; right: 6px; width: 7px; height: 7px; background: var(--danger); border-radius: 50%; border: 1px solid var(--white); }
+.btn { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 500; cursor: pointer; border: none; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Sans', sans-serif; text-decoration: none; }
+.btn-gold { background: var(--gold); color: var(--navy); }
+.btn-gold:hover { background: var(--gold-light); }
+.btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text-muted); }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.btn-danger { background: var(--danger); color: #fff; }
+.btn-danger:hover { opacity: 0.9; }
+.content { padding: 24px 28px; flex: 1; }
+.view { display: none; }
+.view.active { display: block; }
+
+/* STATS */
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 22px; }
+.stat-card { background: var(--white); border: 1px solid var(--border-light); border-radius: 12px; padding: 16px 18px; position: relative; overflow: hidden; }
+.stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold); opacity: 0.4; }
+.stat-card.stat-success::before { background: var(--success); opacity: 1; }
+.stat-card.stat-danger::before { background: var(--danger); opacity: 1; }
+.stat-card.stat-info::before { background: var(--info); opacity: 1; }
+.stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+.stat-value { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--navy); line-height: 1; }
+.stat-sub { font-size: 11px; color: var(--text-light); margin-top: 6px; display: flex; align-items: center; gap: 4px; }
+.stat-up { color: var(--success); } .stat-down { color: var(--danger); }
+
+/* LAYOUT */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 22px; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 22px; }
+
+/* CARD */
+.card { background: var(--white); border: 1px solid var(--border-light); border-radius: 12px; overflow: hidden; }
+.card-header { padding: 16px 18px; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; justify-content: space-between; }
+.card-title { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 600; color: var(--navy); }
+.card-body { padding: 16px 18px; }
+
+/* TABLE */
+.table-wrap { overflow-x: auto; }
+table.data-table { width: 100%; border-collapse: collapse; }
+.data-table th { text-align: left; font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; padding: 0 12px 10px; font-weight: 500; }
+.data-table td { padding: 10px 12px; font-size: 13px; border-top: 1px solid var(--border-light); vertical-align: middle; }
+.data-table tr:hover td { background: var(--cream); }
+
+/* BADGES */
+.badge { display: inline-flex; align-items: center; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 500; white-space: nowrap; }
+.badge-success { background: #eaf3de; color: #3b6d11; }
+.badge-danger { background: #fcebeb; color: #a32d2d; }
+.badge-warning { background: #faeeda; color: #854f0b; }
+.badge-info { background: #e6f1fb; color: #185fa5; }
+.badge-navy { background: #e8ebf2; color: var(--navy); }
+.badge-gold { background: #fdf6e3; color: var(--gold-dim); }
+
+/* FORM */
+.form-group { margin-bottom: 16px; }
+.form-label { display: block; font-size: 12px; font-weight: 500; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.form-control { width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text-main); background: var(--cream); outline: none; transition: border-color 0.2s; }
+.form-control:focus { border-color: var(--gold); background: #fff; }
+textarea.form-control { resize: vertical; min-height: 80px; }
+select.form-control { cursor: pointer; }
+
+/* TOGGLE */
+.toggle-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border-light); }
+.toggle-label { font-size: 13px; color: var(--text-main); }
+.toggle-sub { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+.toggle { width: 40px; height: 22px; background: #d1d5db; border-radius: 11px; cursor: pointer; position: relative; transition: background 0.2s; border: none; flex-shrink: 0; }
+.toggle.on { background: var(--success); }
+.toggle::after { content: ''; position: absolute; width: 18px; height: 18px; background: #fff; border-radius: 50%; top: 2px; left: 2px; transition: left 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+.toggle.on::after { left: 20px; }
+
+/* MISC */
+.progress-bar { height: 6px; background: var(--cream2); border-radius: 3px; overflow: hidden; margin-top: 6px; }
+.progress-fill { height: 100%; border-radius: 3px; background: var(--gold); }
+.progress-fill.green { background: var(--success); }
+.progress-fill.red { background: var(--danger); }
+.search-box { display: flex; align-items: center; gap: 8px; background: var(--cream); border: 1px solid var(--border); border-radius: 8px; padding: 7px 12px; }
+.search-box input { border: none; background: transparent; outline: none; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text-main); width: 100%; }
+.search-box svg { width: 14px; height: 14px; color: var(--text-muted); flex-shrink: 0; }
+.live-dot { width: 7px; height: 7px; background: var(--success); border-radius: 50%; display: inline-block; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(29,158,117,0.4)}50%{opacity:.8;box-shadow:0 0 0 4px rgba(29,158,117,0)} }
+.section-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--navy); }
+.mini-bar-chart { display: flex; align-items: flex-end; gap: 4px; height: 60px; margin-top: 10px; }
+.mini-bar { flex: 1; background: var(--gold); opacity: 0.5; border-radius: 3px 3px 0 0; min-height: 4px; }
+.mini-bar:last-child { opacity: 1; }
+
+/* KANBAN */
+.kanban { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.kanban-col { background: var(--cream); border-radius: 12px; padding: 12px; min-height: 300px; }
+.kanban-col-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.kanban-col-title { font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; }
+.kanban-count { font-size: 11px; background: var(--white); border: 1px solid var(--border-light); color: var(--text-muted); padding: 2px 7px; border-radius: 20px; }
+.case-card { background: var(--white); border: 1px solid var(--border-light); border-radius: 10px; padding: 12px; margin-bottom: 8px; cursor: pointer; transition: all 0.2s; border-left: 3px solid var(--gold); }
+.case-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); transform: translateY(-1px); }
+.case-card.urgent { border-left-color: var(--danger); }
+.case-card.success { border-left-color: var(--success); }
+.case-card.info { border-left-color: var(--info); }
+.case-no { font-size: 10px; color: var(--text-light); margin-bottom: 4px; }
+.case-title { font-size: 13px; font-weight: 500; color: var(--navy); margin-bottom: 6px; }
+.case-client { font-size: 11px; color: var(--text-muted); }
+.case-footer { margin-top: 8px; display: flex; align-items: center; justify-content: space-between; }
+
+/* CLIENT */
+.client-card { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border-light); }
+.client-card:last-child { border-bottom: none; }
+.client-ava { width: 38px; height: 38px; border-radius: 50%; background: var(--navy); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 13px; flex-shrink: 0; }
+.client-name { font-size: 13px; font-weight: 500; color: var(--navy); }
+.client-info { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.client-actions { margin-left: auto; display: flex; gap: 6px; }
+
+/* APPOINTMENTS */
+.appt-item { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border-light); }
+.appt-item:last-child { border-bottom: none; }
+.appt-time { text-align: center; min-width: 50px; }
+.appt-hour { font-size: 14px; font-weight: 600; color: var(--navy); }
+.appt-min { font-size: 11px; color: var(--text-muted); }
+.appt-body { flex: 1; }
+.appt-title { font-size: 13px; font-weight: 500; color: var(--navy); }
+.appt-client { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.appt-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+
+/* CHAT */
+.chat-layout { display: grid; grid-template-columns: 280px 1fr 260px; gap: 14px; height: calc(100vh - 140px); }
+.chat-sessions { background: var(--white); border: 1px solid var(--border-light); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+.chat-session-list { flex: 1; overflow-y: auto; padding: 8px; }
+.session-item { padding: 10px 12px; border-radius: 8px; cursor: pointer; margin-bottom: 4px; transition: all 0.15s; border-left: 2px solid transparent; }
+.session-item:hover { background: var(--cream); }
+.session-item.active { background: #fdf6e3; border-left-color: var(--gold); }
+.session-name { font-size: 13px; font-weight: 500; color: var(--navy); margin-bottom: 2px; }
+.session-preview { font-size: 11px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.session-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 4px; }
+.session-time { font-size: 10px; color: var(--text-light); }
+.chat-main { background: var(--white); border: 1px solid var(--border-light); border-radius: 12px; display: flex; flex-direction: column; overflow: hidden; }
+.chat-messages { flex: 1; padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+.msg { display: flex; gap: 10px; max-width: 85%; }
+.msg.bot { align-self: flex-start; }
+.msg.user { align-self: flex-end; flex-direction: row-reverse; }
+.msg-avatar { width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; }
+.bot-avatar { background: var(--navy); color: var(--gold); }
+.user-avatar-msg { background: var(--gold); color: var(--navy); }
+.msg-bubble { padding: 10px 14px; border-radius: 12px; font-size: 13px; line-height: 1.5; }
+.bot .msg-bubble { background: var(--cream); border: 1px solid var(--border-light); color: var(--text-main); border-top-left-radius: 4px; }
+.user .msg-bubble { background: var(--navy); color: #ffffff; border-top-right-radius: 4px; }
+.msg-time { font-size: 10px; color: var(--text-light); margin-top: 4px; }
+.user .msg-time { text-align: left; }
+.chat-input-area { padding: 12px 16px; border-top: 1px solid var(--border-light); display: flex; gap: 8px; align-items: flex-end; }
+.chat-input { flex: 1; padding: 10px 14px; border: 1px solid var(--border); border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text-main); background: var(--cream); resize: none; outline: none; min-height: 40px; }
+.chat-input:focus { border-color: var(--gold); }
+.chat-send { width: 38px; height: 38px; background: var(--navy); border: none; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.chat-send:hover { background: var(--navy-mid); }
+.chat-send svg { width: 16px; height: 16px; fill: var(--gold); }
+.chat-info { background: var(--white); border: 1px solid var(--border-light); border-radius: 12px; padding: 16px; overflow-y: auto; }
+.info-section { margin-bottom: 20px; }
+.info-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.info-value { font-size: 13px; color: var(--navy); font-weight: 500; }
+.info-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+/* FAQ */
+.faq-item { border: 1px solid var(--border-light); border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
+.faq-q { padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 13px; font-weight: 500; color: var(--navy); background: var(--white); }
+.faq-q:hover { background: var(--cream); }
+.faq-q svg { width: 14px; height: 14px; color: var(--text-muted); transition: transform 0.2s; }
+.faq-q.open svg { transform: rotate(180deg); }
+.faq-a { padding: 0 16px; max-height: 0; overflow: hidden; transition: max-height 0.3s, padding 0.3s; font-size: 12px; color: var(--text-muted); line-height: 1.6; background: var(--cream); }
+.faq-a.open { max-height: 200px; padding: 12px 16px; }
+
+/* PAGE MANAGER */
+.page-item { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 8px; margin-bottom: 4px; cursor: pointer; border-left: 2px solid transparent; }
+.page-item:hover { background: var(--cream); }
+.page-item.active-page { background: #fdf6e3; border-left-color: var(--gold); }
+.page-dot { width: 8px; height: 8px; border-radius: 50%; }
+.page-name { font-size: 13px; color: var(--navy); flex: 1; }
+.page-status { font-size: 11px; color: var(--text-muted); }
+
+/* ACTIVITY */
+.activity-item { display: flex; gap: 10px; padding: 8px 0; }
+.activity-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 4px; flex-shrink: 0; }
+.activity-text { font-size: 12px; color: var(--text-main); }
+.activity-time { font-size: 10px; color: var(--text-light); margin-top: 2px; }
+
+/* BLOG */
+.blog-list { display: flex; flex-direction: column; gap: 10px; }
+.blog-item { background: var(--white); border: 1px solid var(--border-light); border-radius: 10px; padding: 14px 16px; display: flex; align-items: flex-start; gap: 14px; transition: all 0.2s; }
+.blog-item:hover { border-color: var(--gold); }
+.blog-item-cat { width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+.blog-item-body { flex: 1; }
+.blog-item-title { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 4px; }
+.blog-item-meta { font-size: 11px; color: var(--text-muted); display: flex; gap: 12px; align-items: center; }
+.blog-item-actions { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
+
+.blog-editor { background: var(--white); border: 1px solid var(--border-light); border-radius: 12px; overflow: hidden; }
+.editor-toolbar { padding: 10px 16px; border-bottom: 1px solid var(--border-light); display: flex; gap: 4px; flex-wrap: wrap; }
+.tool-btn { padding: 5px 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--cream); cursor: pointer; font-size: 12px; font-weight: 500; color: var(--text-muted); font-family: 'DM Sans', sans-serif; transition: all 0.15s; }
+.tool-btn:hover { border-color: var(--gold); color: var(--gold); }
+.editor-area { padding: 16px; min-height: 250px; outline: none; font-size: 14px; line-height: 1.7; color: var(--text-main); }
+.editor-area:focus { background: #fefefe; }
+.editor-footer { padding: 10px 16px; border-top: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center; }
+
+.category-tag { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 500; border: 1px solid var(--border-light); cursor: pointer; background: var(--cream); color: var(--text-muted); transition: all 0.15s; }
+.category-tag.active { background: #fdf6e3; border-color: var(--gold); color: var(--gold-dim); }
+
+/* NOTIFICATION */
+.notif-popup { position: fixed; bottom: 24px; right: 24px; background: var(--navy); color: #ffffff; padding: 12px 18px; border-radius: 10px; font-size: 13px; display: flex; align-items: center; gap: 10px; z-index: 9999; box-shadow: 0 4px 20px rgba(0,0,0,0.2); animation: slideUp 0.3s ease; max-width: 320px; }
+.notif-popup.hidden { display: none; }
+@keyframes slideUp { from{transform:translateY(16px);opacity:0} to{transform:translateY(0);opacity:1} }
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+      </div>
+      <div class="brand-name">Hukuk Portalı</div>
+      <div class="brand-sub">Yönetim Paneli</div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <span class="nav-label">Genel</span>
+        <button class="nav-item active" onclick="showView('dashboard')">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+          Genel Bakış
+        </button>
+        <button class="nav-item" onclick="showView('chatbot')">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+          Chatbot
+          <span class="nav-badge">3</span>
+        </button>
+      </div>
+
+      <div class="nav-section">
+        <span class="nav-label">Hukuk</span>
+        <button class="nav-item" onclick="showView('cases')">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-2.18c.07-.44.18-.86.18-1.3C18 2.12 15.88 0 13.3 0c-1.3 0-2.48.54-3.34 1.41L8 4 5.04 1.41C4.18.54 3.01 0 1.7 0 .76 0 0 .76 0 1.7v.59C0 3.4.63 4.34 1.56 4.8L4 6H2C.9 6 0 6.9 0 8v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"/></svg>
+          Davalar
+          <span class="nav-badge gold">12</span>
+        </button>
+        <button class="nav-item" onclick="showView('clients')">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          Müvekkiller
+        </button>
+        <button class="nav-item" onclick="showView('appointments')">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+          Randevular
+        </button>
+        <button class="nav-item" onclick="showView('documents')">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          Belgeler
+        </button>
+      </div>
+
+      <div class="nav-section">
+        <span class="nav-label">Site Yönetimi</span>
+        <button class="nav-item" onclick="showView('website')">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          Web Sayfaları
+        </button>
+        <button class="nav-item" onclick="showView('blog')">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          Blog Yönetimi
+          <span class="nav-badge gold">2</span>
+        </button>
+        <button class="nav-item" onclick="showView('seo')">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          SEO & Analitik
+        </button>
+      </div>
+
+      <div class="nav-section">
+        <span class="nav-label">Finans</span>
+        <button class="nav-item" onclick="showView('finance')">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+          Finans
+        </button>
+      </div>
+
+      <div class="nav-section">
+        <span class="nav-label">Ayarlar</span>
+        <button class="nav-item" onclick="showView('chatbot-config')">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/></svg>
+          Bot Ayarları
+        </button>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-card">
+        <div class="user-avatar">MK</div>
+        <div>
+          <div class="user-name">Av. Mahmut Kaya</div>
+          <div class="user-role">Kurucu Ortak</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="topbar">
+      <div class="topbar-title" id="page-title">Genel Bakış</div>
+      <div class="topbar-actions">
+        <div class="search-box" style="max-width:260px">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <input type="text" placeholder="Ara...">
+        </div>
+        <div class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+          <div class="notif-dot"></div>
+        </div>
+        <button class="btn btn-gold" onclick="showNotif('Yeni ekleme formu açıldı!')">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+          Yeni Ekle
+        </button>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- DASHBOARD -->
+      <div class="view active" id="view-dashboard">
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-label">Aktif Dava</div><div class="stat-value">47</div><div class="stat-sub"><span class="stat-up">↑ 3</span>&nbsp;bu ay</div></div>
+          <div class="stat-card stat-success"><div class="stat-label">Kazanılan Dava</div><div class="stat-value">89<span style="font-size:16px;font-weight:400">%</span></div><div class="stat-sub"><span class="stat-up">↑ 2%</span>&nbsp;geçen aya göre</div></div>
+          <div class="stat-card stat-info"><div class="stat-label">Müvekkil</div><div class="stat-value">243</div><div class="stat-sub"><span class="stat-up">↑ 8</span>&nbsp;yeni bu ay</div></div>
+          <div class="stat-card stat-danger"><div class="stat-label">Chatbot Sorgusu</div><div class="stat-value">1.2K</div><div class="stat-sub"><span class="stat-up">↑ 15%</span>&nbsp;bu hafta</div></div>
+        </div>
+        <div class="two-col">
+          <div class="card">
+            <div class="card-header"><span class="card-title">Dava Durumu</span><span class="badge badge-navy">Bu Ay</span></div>
+            <div class="card-body">
+              <div style="display:flex;gap:16px;margin-bottom:16px">
+                <div style="flex:1"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px">Devam</div><div style="font-size:20px;font-weight:600;color:var(--navy)">24</div><div class="progress-bar"><div class="progress-fill" style="width:51%"></div></div></div>
+                <div style="flex:1"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px">Sonuçlandı</div><div style="font-size:20px;font-weight:600;color:var(--navy)">18</div><div class="progress-bar"><div class="progress-fill green" style="width:38%"></div></div></div>
+                <div style="flex:1"><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px">Askıda</div><div style="font-size:20px;font-weight:600;color:var(--navy)">5</div><div class="progress-bar"><div class="progress-fill red" style="width:11%"></div></div></div>
+              </div>
+              <div style="font-size:12px;color:var(--text-muted);border-top:1px solid var(--border-light);padding-top:12px;margin-bottom:8px">Son 6 aylık aktivite</div>
+              <div class="mini-bar-chart">
+                <div class="mini-bar" style="height:35%"></div><div class="mini-bar" style="height:55%"></div><div class="mini-bar" style="height:40%"></div><div class="mini-bar" style="height:70%"></div><div class="mini-bar" style="height:60%"></div><div class="mini-bar" style="height:90%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><span class="card-title">Bugünkü Randevular</span><span class="badge badge-success">17 Mar</span></div>
+            <div class="card-body">
+              <div class="appt-item"><div class="appt-dot" style="background:var(--gold)"></div><div class="appt-time"><div class="appt-hour">09</div><div class="appt-min">:00</div></div><div class="appt-body"><div class="appt-title">İlk Danışma</div><div class="appt-client">Mehmet Yıldız</div></div><span class="badge badge-warning">Bekliyor</span></div>
+              <div class="appt-item"><div class="appt-dot" style="background:var(--info)"></div><div class="appt-time"><div class="appt-hour">11</div><div class="appt-min">:30</div></div><div class="appt-body"><div class="appt-title">Dava Görüşmesi</div><div class="appt-client">Fatma Kaya</div></div><span class="badge badge-info">Video</span></div>
+              <div class="appt-item"><div class="appt-dot" style="background:var(--success)"></div><div class="appt-time"><div class="appt-hour">14</div><div class="appt-min">:00</div></div><div class="appt-body"><div class="appt-title">Sözleşme İmzası</div><div class="appt-client">Ahmet Demir</div></div><span class="badge badge-success">Onaylı</span></div>
+              <div class="appt-item"><div class="appt-dot" style="background:var(--danger)"></div><div class="appt-time"><div class="appt-hour">16</div><div class="appt-min">:30</div></div><div class="appt-body"><div class="appt-title">Acil Danışma</div><div class="appt-client">Elif Şahin</div></div><span class="badge badge-danger">Acil</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="card">
+            <div class="card-header"><span class="card-title">Son Chatbot Görüşmeleri</span><span style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--success)"><span class="live-dot"></span>Canlı</span></div>
+            <div class="card-body">
+              <table class="data-table">
+                <thead><tr><th>Kullanıcı</th><th>Konu</th><th>Durum</th><th>Saat</th></tr></thead>
+                <tbody>
+                  <tr><td>Anonim</td><td>İş Hukuku</td><td><span class="badge badge-success">Çözüldü</span></td><td style="color:var(--text-muted);font-size:12px">14:22</td></tr>
+                  <tr><td>M. Arslan</td><td>Boşanma</td><td><span class="badge badge-warning">Devam</span></td><td style="color:var(--text-muted);font-size:12px">14:08</td></tr>
+                  <tr><td>Anonim</td><td>Miras</td><td><span class="badge badge-info">Yönlendirme</span></td><td style="color:var(--text-muted);font-size:12px">13:55</td></tr>
+                  <tr><td>A. Çelik</td><td>Kira</td><td><span class="badge badge-success">Çözüldü</span></td><td style="color:var(--text-muted);font-size:12px">13:41</td></tr>
+                </tbody>
+              </table>
+              <button class="btn btn-outline" style="margin-top:12px;width:100%;justify-content:center" onclick="showView('chatbot')">Tüm görüşmeleri gör →</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><span class="card-title">Son Aktiviteler</span></div>
+            <div class="card-body">
+              <div class="activity-item"><div class="activity-dot" style="background:var(--success)"></div><div><div class="activity-text">Dava #2024-089 mahkemede kazanıldı</div><div class="activity-time">10 dakika önce</div></div></div>
+              <div class="activity-item"><div class="activity-dot" style="background:var(--info)"></div><div><div class="activity-text">Yeni müvekkil kaydı: Zeynep Kara</div><div class="activity-time">42 dakika önce</div></div></div>
+              <div class="activity-item"><div class="activity-dot" style="background:var(--gold)"></div><div><div class="activity-text">Blog yazısı taslak: "Boşanma Hukuku Rehberi"</div><div class="activity-time">1 saat önce</div></div></div>
+              <div class="activity-item"><div class="activity-dot" style="background:var(--warning)"></div><div><div class="activity-text">Duruşma hatırlatıcısı gönderildi (3 müvekkil)</div><div class="activity-time">2 saat önce</div></div></div>
+              <div class="activity-item"><div class="activity-dot" style="background:var(--danger)"></div><div><div class="activity-text">Temyiz başvurusu son tarihi yaklaşıyor</div><div class="activity-time">Dün 17:30</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHATBOT -->
+      <div class="view" id="view-chatbot">
+        <div class="section-row" style="margin-bottom:20px">
+          <div><div style="font-size:12px;color:var(--text-muted);margin-bottom:4px">Chatbot Yönetimi</div><div style="display:flex;align-items:center;gap:8px"><span class="live-dot"></span><span style="font-size:13px;color:var(--success);font-weight:500">Canlı · Bugün 1.247 mesaj</span></div></div>
+          <div style="display:flex;gap:8px"><button class="btn btn-outline" onclick="showView('chatbot-config')">⚙ Bot Ayarları</button><button class="btn btn-gold">Yeni Şablon +</button></div>
+        </div>
+        <div class="chat-layout">
+          <div class="chat-sessions">
+            <div class="card-header"><span class="card-title">Görüşmeler</span><span class="badge badge-navy">Live</span></div>
+            <div style="padding:8px"><div class="search-box"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg><input type="text" placeholder="Görüşme ara..."></div></div>
+            <div class="chat-session-list">
+              <div class="session-item active" onclick="switchSession(this)"><div class="session-name">Mehmet Arslan</div><div class="session-preview">Boşanma davası hakkında...</div><div class="session-meta"><span class="session-time">14:08</span><span class="badge badge-warning" style="font-size:10px">Aktif</span></div></div>
+              <div class="session-item" onclick="switchSession(this)"><div class="session-name">Anonim Kullanıcı</div><div class="session-preview">Kira sözleşmesi iptali...</div><div class="session-meta"><span class="session-time">13:55</span><span class="badge badge-success" style="font-size:10px">Bot</span></div></div>
+              <div class="session-item" onclick="switchSession(this)"><div class="session-name">Fatma Yıldız</div><div class="session-preview">İş akdi fesih tazminatı...</div><div class="session-meta"><span class="session-time">13:41</span><span class="badge badge-info" style="font-size:10px">Yönlendirme</span></div></div>
+              <div class="session-item" onclick="switchSession(this)"><div class="session-name">Ahmet Çelik</div><div class="session-preview">Miras paylaşımı konusunda...</div><div class="session-meta"><span class="session-time">12:30</span><span class="badge badge-success" style="font-size:10px">Tamamlandı</span></div></div>
+            </div>
+          </div>
+          <div class="chat-main">
+            <div class="card-header">
+              <div style="display:flex;align-items:center;gap:10px"><div class="msg-avatar user-avatar-msg" style="background:var(--gold);color:var(--navy)">MA</div><div><div style="font-size:13px;font-weight:500;color:var(--navy)">Mehmet Arslan</div><div style="font-size:11px;color:var(--success);display:flex;align-items:center;gap:4px"><span class="live-dot" style="width:6px;height:6px"></span>Aktif görüşme</div></div></div>
+              <div style="display:flex;gap:6px"><button class="btn btn-outline" style="font-size:12px;padding:6px 12px">Avukata Devret</button><button class="btn btn-outline" style="font-size:12px;padding:6px 12px">Bitir</button></div>
+            </div>
+            <div class="chat-messages" id="chat-msgs">
+              <div class="msg bot"><div class="msg-avatar bot-avatar">AI</div><div><div class="msg-bubble">Merhaba! Hukuk Portalı'na hoş geldiniz. Hukuki konularda size yardımcı olmak için buradayım.</div><div class="msg-time">14:01</div></div></div>
+              <div class="msg user"><div class="msg-avatar user-avatar-msg">MA</div><div><div class="msg-bubble">Eşimden boşanmak istiyorum, bilgi alabilir miyim?</div><div class="msg-time">14:03</div></div></div>
+              <div class="msg bot"><div class="msg-avatar bot-avatar">AI</div><div><div class="msg-bubble">Tabii ki. Türk hukukunda boşanma iki şekilde olur:<br><br>1. <b>Anlaşmalı boşanma</b> — Her iki taraf anlaşırsa 3-4 ay sürer.<br>2. <b>Çekişmeli boşanma</b> — Taraflar anlaşamıyorsa 1-3 yıl sürebilir.<br><br>Randevu almak ister misiniz?</div><div class="msg-time">14:04</div></div></div>
+              <div class="msg user"><div class="msg-avatar user-avatar-msg">MA</div><div><div class="msg-bubble">Evet randevu almak istiyorum.</div><div class="msg-time">14:08</div></div></div>
+            </div>
+            <div class="chat-input-area">
+              <textarea class="chat-input" placeholder="Admin olarak yanıt yaz..." rows="1" id="admin-chat-input"></textarea>
+              <button class="chat-send" onclick="sendAdminMsg()"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+            </div>
+          </div>
+          <div class="chat-info">
+            <div class="info-section"><div class="info-label">Ziyaretçi</div><div class="info-value">Mehmet Arslan</div><div class="info-sub">Kayıtlı müvekkil</div></div>
+            <div class="info-section"><div class="info-label">İletişim</div><div class="info-value" style="font-size:12px">mehmet@email.com</div><div class="info-sub">+90 532 xxx xx xx</div></div>
+            <div class="info-section"><div class="info-label">Kategori</div><span class="badge badge-warning">Aile Hukuku</span></div>
+            <div class="info-section"><div class="info-label">Süre</div><div class="info-value">7 dakika</div><div class="info-sub">6 mesaj</div></div>
+            <div class="info-section"><div class="info-label">Bot Güveni</div><div style="font-size:20px;font-weight:600;color:var(--success)">%92</div><div class="progress-bar"><div class="progress-fill green" style="width:92%"></div></div></div>
+            <div class="info-section">
+              <button class="btn btn-gold" style="width:100%;justify-content:center;font-size:12px" onclick="showNotif('Randevu oluşturuldu!')">Randevu Oluştur</button>
+              <button class="btn btn-outline" style="width:100%;justify-content:center;font-size:12px;margin-top:6px">Avukata Devret</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHATBOT CONFIG -->
+      <div class="view" id="view-chatbot-config">
+        <div style="max-width:800px">
+          <div class="section-row"><div class="section-title">Chatbot Yapılandırması</div><button class="btn btn-gold" onclick="showNotif('Ayarlar kaydedildi!')">Kaydet</button></div>
+          <div class="card" style="margin-bottom:14px">
+            <div class="card-header"><span class="card-title">Bot Kimliği</span></div>
+            <div class="card-body">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+                <div class="form-group"><label class="form-label">Bot Adı</label><input class="form-control" type="text" value="Hukuk Asistanı"></div>
+                <div class="form-group"><label class="form-label">Karşılama Mesajı</label><input class="form-control" type="text" value="Merhaba! Size nasıl yardımcı olabilirim?"></div>
+              </div>
+              <div class="form-group"><label class="form-label">Sistem Prompt</label><textarea class="form-control" style="min-height:100px">Sen profesyonel bir hukuk asistanısın. Türk hukuku konusunda bilgi veriyorsun. Kesinlikle hukuki tavsiye vermekten kaçınıyor, müvekkilleri avukata yönlendiriyorsun. Nazik, bilgili ve net konuşuyorsun.</textarea></div>
+            </div>
+          </div>
+          <div class="card" style="margin-bottom:14px">
+            <div class="card-header"><span class="card-title">Özellikler</span></div>
+            <div class="card-body">
+              <div class="toggle-row"><div><div class="toggle-label">Chatbotu Aktif Et</div><div class="toggle-sub">Web sitesinde görünür</div></div><button class="toggle on" onclick="this.classList.toggle('on')"></button></div>
+              <div class="toggle-row"><div><div class="toggle-label">Otomatik Randevu Teklifi</div><div class="toggle-sub">Görüşme sonunda öner</div></div><button class="toggle on" onclick="this.classList.toggle('on')"></button></div>
+              <div class="toggle-row"><div><div class="toggle-label">Avukata Devir</div><div class="toggle-sub">Karmaşık sorularda canlıya bağla</div></div><button class="toggle on" onclick="this.classList.toggle('on')"></button></div>
+              <div class="toggle-row"><div><div class="toggle-label">Mesai Dışı Mod</div><div class="toggle-sub">Gece otomatik mesaj bırak</div></div><button class="toggle" onclick="this.classList.toggle('on')"></button></div>
+              <div class="toggle-row"><div><div class="toggle-label">Konu Sınıflandırma</div><div class="toggle-sub">Soruları otomatik kategorize et</div></div><button class="toggle on" onclick="this.classList.toggle('on')"></button></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><span class="card-title">Sık Sorulan Sorular</span><button class="btn btn-gold" style="font-size:12px;padding:6px 12px" onclick="showNotif('Yeni SSS eklendi!')">+ Ekle</button></div>
+            <div class="card-body">
+              <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Boşanma davası ne kadar sürer?<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg></div><div class="faq-a">Anlaşmalı boşanma 3-4 ay, çekişmeli boşanma 1-3 yıl alabilir.</div></div>
+              <div class="faq-item"><div class="faq-q open" onclick="toggleFaq(this)">Haksız feshinde tazminat alabilir miyim?<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg></div><div class="faq-a open">En az 1 yıl çalışan işçiler kıdem tazminatı hakkına sahiptir. Haksız fesihte ihbar tazminatı da talep edilebilir.</div></div>
+              <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Miras davası için gerekli belgeler?<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg></div><div class="faq-a">Veraset ilamı, nüfus cüzdanı, tapu ve banka bilgileri temel belgelerdir.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASES -->
+      <div class="view" id="view-cases">
+        <div class="section-row"><div class="section-title">Dava Yönetimi</div><button class="btn btn-gold" onclick="showNotif('Yeni dava formu açıldı')">+ Yeni Dava</button></div>
+        <div class="kanban">
+          <div class="kanban-col"><div class="kanban-col-header"><span class="kanban-col-title">Başvuru</span><span class="kanban-count">4</span></div>
+            <div class="case-card info"><div class="case-no">#2024-112</div><div class="case-title">İş Akdi Feshi</div><div class="case-client">Zeynep Kara</div><div class="case-footer"><span class="badge badge-info">İş Hukuku</span><span style="font-size:11px;color:var(--text-light)">2 gün önce</span></div></div>
+            <div class="case-card info"><div class="case-no">#2024-113</div><div class="case-title">Kira Uyuşmazlığı</div><div class="case-client">Hasan Çelik</div><div class="case-footer"><span class="badge badge-navy">Gayrimenkul</span><span style="font-size:11px;color:var(--text-light)">Dün</span></div></div>
+          </div>
+          <div class="kanban-col"><div class="kanban-col-header"><span class="kanban-col-title">Hazırlık</span><span class="kanban-count">6</span></div>
+            <div class="case-card urgent"><div class="case-no">#2024-098</div><div class="case-title">Miras Paylaşım Davası</div><div class="case-client">Ahmet Yıldız</div><div class="case-footer"><span class="badge badge-danger">Acil</span><span style="font-size:11px;color:var(--danger)">Son: 5 gün</span></div></div>
+            <div class="case-card"><div class="case-no">#2024-101</div><div class="case-title">Trafik Kazası Tazminatı</div><div class="case-client">Fatma Demir</div><div class="case-footer"><span class="badge badge-warning">Sigorta</span></div></div>
+          </div>
+          <div class="kanban-col"><div class="kanban-col-header"><span class="kanban-col-title">Mahkeme</span><span class="kanban-count">5</span></div>
+            <div class="case-card"><div class="case-no">#2024-087</div><div class="case-title">Anlaşmalı Boşanma</div><div class="case-client">M. ve A. Arslan</div><div class="case-footer"><span class="badge badge-gold">Aile</span><span style="font-size:11px;color:var(--text-light)">24 Mar</span></div></div>
+            <div class="case-card urgent"><div class="case-no">#2024-091</div><div class="case-title">Ticaret Hukuku İhtilafı</div><div class="case-client">ABC Ltd.</div><div class="case-footer"><span class="badge badge-navy">Ticaret</span><span style="font-size:11px;color:var(--danger)">Temyiz</span></div></div>
+          </div>
+          <div class="kanban-col"><div class="kanban-col-header"><span class="kanban-col-title">Tamamlandı</span><span class="kanban-count">18</span></div>
+            <div class="case-card success"><div class="case-no">#2024-089</div><div class="case-title">Haksız Rekabet</div><div class="case-client">XYZ A.Ş.</div><div class="case-footer"><span class="badge badge-success">Kazanıldı</span><span style="font-size:11px;color:var(--text-light)">Bugün</span></div></div>
+            <div class="case-card success"><div class="case-no">#2024-083</div><div class="case-title">İş Kazası Tazminatı</div><div class="case-client">Mehmet Şahin</div><div class="case-footer"><span class="badge badge-success">Kazanıldı</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLIENTS -->
+      <div class="view" id="view-clients">
+        <div class="section-row"><div class="section-title">Müvekkil Yönetimi</div><button class="btn btn-gold" onclick="showNotif('Yeni müvekkil formu açıldı')">+ Yeni Müvekkil</button></div>
+        <div class="card"><div class="card-body">
+          <div class="client-card"><div class="client-ava">ZK</div><div><div class="client-name">Zeynep Kara</div><div class="client-info">İş Hukuku · 2 aktif dava · Gaziantep</div></div><div class="client-actions"><span class="badge badge-success">VIP</span><button class="btn btn-outline" style="font-size:12px;padding:6px 10px">Görüntüle</button></div></div>
+          <div class="client-card"><div class="client-ava">MA</div><div><div class="client-name">Mehmet Arslan</div><div class="client-info">Aile Hukuku · 1 aktif dava · İstanbul</div></div><div class="client-actions"><span class="badge badge-warning">Chatbot</span><button class="btn btn-outline" style="font-size:12px;padding:6px 10px">Görüntüle</button></div></div>
+          <div class="client-card"><div class="client-ava">AÇ</div><div><div class="client-name">Ahmet Çelik</div><div class="client-info">Miras Hukuku · 1 tamamlandı · Ankara</div></div><div class="client-actions"><span class="badge badge-navy">Eski</span><button class="btn btn-outline" style="font-size:12px;padding:6px 10px">Görüntüle</button></div></div>
+          <div class="client-card"><div class="client-ava">FD</div><div><div class="client-name">Fatma Demir</div><div class="client-info">Sigorta · 1 aktif dava · İzmir</div></div><div class="client-actions"><span class="badge badge-info">Yeni</span><button class="btn btn-outline" style="font-size:12px;padding:6px 10px">Görüntüle</button></div></div>
+        </div></div>
+      </div>
+
+      <!-- APPOINTMENTS -->
+      <div class="view" id="view-appointments">
+        <div class="section-row"><div class="section-title">Randevu Takvimi</div><button class="btn btn-gold" onclick="showNotif('Randevu oluşturuldu')">+ Randevu Ekle</button></div>
+        <div class="two-col">
+          <div class="card"><div class="card-header"><span class="card-title">Bugün — 17 Mart 2026</span><span class="badge badge-info">4 randevu</span></div><div class="card-body">
+            <div class="appt-item"><div class="appt-dot" style="background:var(--gold)"></div><div class="appt-time"><div class="appt-hour">09</div><div class="appt-min">:00</div></div><div class="appt-body"><div class="appt-title">İlk Danışma</div><div class="appt-client">Mehmet Yıldız · Yüz yüze</div></div><span class="badge badge-warning">Bekliyor</span></div>
+            <div class="appt-item"><div class="appt-dot" style="background:var(--info)"></div><div class="appt-time"><div class="appt-hour">11</div><div class="appt-min">:30</div></div><div class="appt-body"><div class="appt-title">Dava Görüşmesi</div><div class="appt-client">Fatma Kaya · Video</div></div><span class="badge badge-info">Aktif</span></div>
+            <div class="appt-item"><div class="appt-dot" style="background:var(--success)"></div><div class="appt-time"><div class="appt-hour">14</div><div class="appt-min">:00</div></div><div class="appt-body"><div class="appt-title">Sözleşme İmzası</div><div class="appt-client">Ahmet Demir · Yüz yüze</div></div><span class="badge badge-success">Onaylı</span></div>
+            <div class="appt-item"><div class="appt-dot" style="background:var(--danger)"></div><div class="appt-time"><div class="appt-hour">16</div><div class="appt-min">:30</div></div><div class="appt-body"><div class="appt-title">Acil Danışma</div><div class="appt-client">Elif Şahin · Telefon</div></div><span class="badge badge-danger">Acil</span></div>
+          </div></div>
+          <div class="card"><div class="card-header"><span class="card-title">Bu Hafta</span><span class="badge badge-navy">14 randevu</span></div><div class="card-body">
+            <table class="data-table"><thead><tr><th>Tarih</th><th>Müvekkil</th><th>Tür</th><th>Durum</th></tr></thead><tbody>
+              <tr><td>18 Mar</td><td>A. Yılmaz</td><td>Danışma</td><td><span class="badge badge-warning">Bekliyor</span></td></tr>
+              <tr><td>19 Mar</td><td>H. Çelik</td><td>Sözleşme</td><td><span class="badge badge-success">Onaylı</span></td></tr>
+              <tr><td>20 Mar</td><td>M. Arslan</td><td>Duruşma</td><td><span class="badge badge-info">Mahkeme</span></td></tr>
+              <tr><td>21 Mar</td><td>F. Demir</td><td>Danışma</td><td><span class="badge badge-warning">Bekliyor</span></td></tr>
+            </tbody></table>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- DOCUMENTS -->
+      <div class="view" id="view-documents">
+        <div class="section-row"><div class="section-title">Belge Yönetimi</div><button class="btn btn-gold" onclick="showNotif('Belge yüklendi')">+ Belge Yükle</button></div>
+        <div class="card"><div class="card-body">
+          <table class="data-table"><thead><tr><th>Belge Adı</th><th>Müvekkil</th><th>Tür</th><th>Boyut</th><th>Tarih</th><th></th></tr></thead><tbody>
+            <tr><td style="font-weight:500">Boşanma_Dilekçesi_Arslan.docx</td><td>M. Arslan</td><td><span class="badge badge-info">Dilekçe</span></td><td>245 KB</td><td style="font-size:12px;color:var(--text-muted)">17 Mar 2026</td><td><button class="btn btn-outline" style="font-size:11px;padding:4px 8px" onclick="showNotif('İndiriliyor...')">İndir</button></td></tr>
+            <tr><td style="font-weight:500">Kira_Sozlesmesi_Celik.pdf</td><td>H. Çelik</td><td><span class="badge badge-warning">Sözleşme</span></td><td>1.2 MB</td><td style="font-size:12px;color:var(--text-muted)">15 Mar 2026</td><td><button class="btn btn-outline" style="font-size:11px;padding:4px 8px" onclick="showNotif('İndiriliyor...')">İndir</button></td></tr>
+            <tr><td style="font-weight:500">Veraset_Ilamı_Yıldız.pdf</td><td>A. Yıldız</td><td><span class="badge badge-navy">Resmi</span></td><td>890 KB</td><td style="font-size:12px;color:var(--text-muted)">12 Mar 2026</td><td><button class="btn btn-outline" style="font-size:11px;padding:4px 8px" onclick="showNotif('İndiriliyor...')">İndir</button></td></tr>
+            <tr><td style="font-weight:500">Tazminat_Talebi_Demir.docx</td><td>F. Demir</td><td><span class="badge badge-danger">Talep</span></td><td>340 KB</td><td style="font-size:12px;color:var(--text-muted)">10 Mar 2026</td><td><button class="btn btn-outline" style="font-size:11px;padding:4px 8px" onclick="showNotif('İndiriliyor...')">İndir</button></td></tr>
+          </tbody></table>
+        </div></div>
+      </div>
+
+      <!-- WEBSITE -->
+      <div class="view" id="view-website">
+        <div class="section-row"><div class="section-title">Web Sayfaları Yönetimi</div><button class="btn btn-gold" onclick="showNotif('Değişiklikler yayınlandı!')">Yayınla</button></div>
+        <div class="two-col">
+          <div class="card"><div class="card-header"><span class="card-title">Sayfalar</span><span class="badge badge-success">8 aktif</span></div><div class="card-body">
+            <div class="page-item active-page"><div class="page-dot" style="background:var(--success)"></div><span class="page-name">Ana Sayfa</span><span class="page-status">Yayında</span></div>
+            <div class="page-item" onclick="this.classList.toggle('active-page')"><div class="page-dot" style="background:var(--success)"></div><span class="page-name">Hakkımızda</span><span class="page-status">Yayında</span></div>
+            <div class="page-item" onclick="this.classList.toggle('active-page')"><div class="page-dot" style="background:var(--success)"></div><span class="page-name">Hizmetlerimiz</span><span class="page-status">Yayında</span></div>
+            <div class="page-item" onclick="this.classList.toggle('active-page')"><div class="page-dot" style="background:var(--success)"></div><span class="page-name">Avukatlarımız</span><span class="page-status">Yayında</span></div>
+            <div class="page-item" onclick="this.classList.toggle('active-page')"><div class="page-dot" style="background:var(--warning)"></div><span class="page-name">Blog</span><span class="page-status">Taslak</span></div>
+            <div class="page-item" onclick="this.classList.toggle('active-page')"><div class="page-dot" style="background:var(--success)"></div><span class="page-name">Randevu</span><span class="page-status">Yayında</span></div>
+            <div class="page-item" onclick="this.classList.toggle('active-page')"><div class="page-dot" style="background:var(--success)"></div><span class="page-name">İletişim</span><span class="page-status">Yayında</span></div>
+            <div class="page-item" onclick="this.classList.toggle('active-page')"><div class="page-dot" style="background:var(--danger)"></div><span class="page-name">Gizlilik Politikası</span><span class="page-status">Güncelleme gerek</span></div>
+          </div></div>
+          <div class="card"><div class="card-header"><span class="card-title">Sayfa Düzenle: Ana Sayfa</span></div><div class="card-body">
+            <div class="form-group"><label class="form-label">Başlık</label><input class="form-control" type="text" value="Güvenilir Hukuk Danışmanlığı"></div>
+            <div class="form-group"><label class="form-label">Alt Başlık</label><input class="form-control" type="text" value="Haklarınız için yanınızdayız"></div>
+            <div class="form-group"><label class="form-label">Açıklama</label><textarea class="form-control">25 yıllık deneyimimizle Türkiye genelinde hukuki danışmanlık hizmeti sunuyoruz. Aile, iş ve ceza hukuku alanlarında uzman ekibimizle yanınızdayız.</textarea></div>
+            <div style="display:flex;gap:8px"><button class="btn btn-gold" onclick="showNotif('Kaydedildi!')">Kaydet</button><button class="btn btn-outline">Önizle</button></div>
+          </div></div>
+        </div>
+      </div>
+
+      <!-- BLOG YÖNETİMİ -->
+      <div class="view" id="view-blog">
+        <div class="section-row">
+          <div class="section-title">Blog Yönetimi</div>
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-outline" onclick="showBlogTab('list')">Tüm Yazılar</button>
+            <button class="btn btn-gold" onclick="showBlogTab('new')">+ Yeni Yazı</button>
+          </div>
+        </div>
+
+        <!-- Blog Stats -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px">
+          <div class="stat-card"><div class="stat-label">Toplam Yazı</div><div class="stat-value">24</div><div class="stat-sub"><span class="stat-up">↑ 3</span>&nbsp;bu ay</div></div>
+          <div class="stat-card stat-success"><div class="stat-label">Yayındaki</div><div class="stat-value">18</div><div class="stat-sub">aktif</div></div>
+          <div class="stat-card stat-warning" style="--warning:#ba7517"><div class="stat-label">Taslak</div><div class="stat-value">4</div><div class="stat-sub">bekliyor</div></div>
+          <div class="stat-card stat-info"><div class="stat-label">Aylık Görüntülenme</div><div class="stat-value">3.8K</div><div class="stat-sub"><span class="stat-up">↑ 22%</span></div></div>
+        </div>
+
+        <!-- Blog List Tab -->
+        <div id="blog-list-tab">
+          <!-- Kategori Filtre -->
+          <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center">
+            <span style="font-size:12px;color:var(--text-muted);font-weight:500">Filtre:</span>
+            <span class="category-tag active" onclick="filterCat(this,'tümü')">Tümü (24)</span>
+            <span class="category-tag" onclick="filterCat(this,'aile')">Aile Hukuku (6)</span>
+            <span class="category-tag" onclick="filterCat(this,'is')">İş Hukuku (5)</span>
+            <span class="category-tag" onclick="filterCat(this,'miras')">Miras (4)</span>
+            <span class="category-tag" onclick="filterCat(this,'ticaret')">Ticaret (4)</span>
+            <span class="category-tag" onclick="filterCat(this,'ceza')">Ceza (3)</span>
+            <span class="category-tag" onclick="filterCat(this,'diger')">Diğer (2)</span>
+          </div>
+
+          <div class="blog-list">
+            <div class="blog-item">
+              <div class="blog-item-cat" style="background:#fdf6e3">📚</div>
+              <div class="blog-item-body">
+                <div class="blog-item-title">Boşanma Sürecinde Bilinmesi Gereken 10 Hukuki Hak</div>
+                <div class="blog-item-meta">
+                  <span class="badge badge-success">Yayında</span>
+                  <span class="badge badge-gold">Aile Hukuku</span>
+                  <span>12 Mar 2026</span>
+                  <span>👁 842 görüntülenme</span>
+                </div>
+              </div>
+              <div class="blog-item-actions">
+                <button class="btn btn-outline" style="font-size:12px;padding:5px 10px" onclick="showBlogTab('edit')">Düzenle</button>
+                <button class="btn btn-outline" style="font-size:12px;padding:5px 10px" onclick="showNotif('Yazı kopyalandı')">Kopyala</button>
+                <button class="btn btn-danger" style="font-size:12px;padding:5px 10px" onclick="showNotif('Yazı silindi')">Sil</button>
+              </div>
+            </div>
+            <div class="blog-item">
+              <div class="blog-item-cat" style="background:#e6f1fb">⚖️</div>
+              <div class="blog-item-body">
+                <div class="blog-item-title">İş Akdi Feshinde İşçi Hakları ve Tazminat Hesaplama</div>
+                <div class="blog-item-meta">
+                  <span class="badge badge-success">Yayında</span>
+                  <span class="badge badge-info">İş Hukuku</span>
+                  <span>8 Mar 2026</span>
+                  <span>👁 1.2K görüntülenme</span>
+                </div>
+              </div>
+              <div class="blog-item-actions">
+                <button class="btn btn-outline" style="font-size:12px;padding:5px 10px" onclick="showBlogTab('edit')">Düzenle</button>
+                <button class="btn btn-outline" style="font-size:12px;padding:5px 10px" onclick="showNotif('Yazı kopyalandı')">Kopyala</button>
+                <button class="btn btn-danger" style="font-size:12px;padding:5px 10px" onclick="showNotif('Yazı silindi')">Sil</button>
+              </div>
+            </div>
+            <div class="blog-item">
+              <div class="blog-item-cat" style="background:#eaf3de">🏛️</div>
+              <div class="blog-item-body">
+                <div class="blog-item-title">Miras Hukukunda Saklı Pay ve Tenkis Davası</div>
+                <div class="blog-item-meta">
+                  <span class="badge badge-success">Yayında</span>
+                  <span class="badge badge-navy">Miras Hukuku</span>
+                  <span>3 Mar 2026</span>
+                  <span>👁 690 görüntülenme</span>
+                </div>
+              </div>
+              <div class="blog-item-actions">
+                <button class="btn btn-outline" style="font-size:12px;padding:5px 10px" onclick="showBlogTab('edit')">Düzenle</button>
+                <button class="btn btn-outline" style="font-size:12px;padding:5px 10px" onclick="showNotif('Yazı kopyalandı')">Kopyala</button>
+                <button class="btn btn-danger" style="font-size:12px;padding:5px 10px" onclick="showNotif('Yazı silindi')">Sil</button>
+              </div>
+            </div>
+            <div class="blog-item">
+              <div class="blog-item-cat" style="background:#faeeda">📝</div>
+              <div class="blog-item-body">
+                <div class="blog-item-title">Kira Sözleşmelerinde Kiracı ve Kiraya Veren Hakları</div>
+                <div class="blog-item-meta">
+                  <span class="badge badge-warning">Taslak</span>
+                  <span class="badge badge-gold">Gayrimenkul</span>
+                  <span>16 Mar 2026</span>
+                  <span style="color:var(--text-light)">Henüz yayınlanmadı</span>
+                </div>
+              </div>
+              <div class="blog-item-actions">
+                <button class="btn btn-gold" style="font-size:12px;padding:5px 10px" onclick="showNotif('Yazı yayınlandı!')">Yayınla</button>
+                <button class="btn btn-outline" style="font-size:12px;padding:5px 10px" onclick="showBlogTab('edit')">Düzenle</button>
+                <button class="btn btn-danger" style="font-size:12px;padding:5px 10px" onclick="showNotif('Yazı silindi')">Sil</button>
+              </div>
+            </div>
+            <div class="blog-item">
+              <div class="blog-item-cat" style="background:#faeeda">⚠️</div>
+              <div class="blog-item-body">
+                <div class="blog-item-title">Boşanma Hukuku Kapsamlı Rehberi — 2026 Güncel</div>
+                <div class="blog-item-meta">
+                  <span class="badge badge-warning">Taslak</span>
+                  <span class="badge badge-gold">Aile Hukuku</span>
+                  <span>17 Mar 2026</span>
+                  <span style="color:var(--text-light)">Henüz yayınlanmadı</span>
+                </div>
+              </div>
+              <div class="blog-item-actions">
+                <button class="btn btn-gold" style="font-size:12px;padding:5px 10px" onclick="showNotif('Yazı yayınlandı!')">Yayınla</button>
+                <button class="btn btn-outline" style="font-size:12px;padding:5px 10px" onclick="showBlogTab('edit')">Düzenle</button>
+                <button class="btn btn-danger" style="font-size:12px;padding:5px 10px" onclick="showNotif('Yazı silindi')">Sil</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- New / Edit Post Tab -->
+        <div id="blog-editor-tab" style="display:none">
+          <div style="display:grid;grid-template-columns:1fr 300px;gap:16px">
+            <!-- Editor -->
+            <div>
+              <div class="form-group">
+                <label class="form-label">Başlık</label>
+                <input class="form-control" type="text" placeholder="Blog yazısı başlığını girin..." style="font-size:16px;font-weight:500">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Özet (SEO & Liste Görünümü)</label>
+                <textarea class="form-control" rows="2" placeholder="Yazının kısa özeti..."></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label">İçerik</label>
+                <div class="blog-editor">
+                  <div class="editor-toolbar">
+                    <button class="tool-btn" onclick="formatDoc('bold')"><b>B</b></button>
+                    <button class="tool-btn" onclick="formatDoc('italic')"><i>I</i></button>
+                    <button class="tool-btn" onclick="formatDoc('underline')"><u>U</u></button>
+                    <button class="tool-btn" style="border-left:2px solid var(--border-light);margin-left:4px;padding-left:10px">H2</button>
+                    <button class="tool-btn">H3</button>
+                    <button class="tool-btn" style="border-left:2px solid var(--border-light);margin-left:4px;padding-left:10px">Liste</button>
+                    <button class="tool-btn">Alıntı</button>
+                    <button class="tool-btn" style="border-left:2px solid var(--border-light);margin-left:4px;padding-left:10px">Bağlantı</button>
+                    <button class="tool-btn">Resim</button>
+                  </div>
+                  <div class="editor-area" contenteditable="true" id="blog-content" placeholder="Yazınızı buraya yazın...">
+                    <p>Hukuki konularda vatandaşların en çok merak ettiği sorulardan biri boşanma sürecinin nasıl işlediğidir. Bu yazıda, Türk hukuku çerçevesinde boşanma sürecini detaylı olarak ele alacağız.</p>
+                    <p>Boşanma davaları, Türk Medeni Kanunu'nun 161-184. maddeleri arasında düzenlenmektedir...</p>
+                  </div>
+                  <div class="editor-footer">
+                    <span style="font-size:12px;color:var(--text-light)">Otomatik kaydedildi: 14:32</span>
+                    <div style="display:flex;gap:8px">
+                      <button class="btn btn-outline" onclick="showNotif('Taslak kaydedildi')">Taslak Kaydet</button>
+                      <button class="btn btn-gold" onclick="showNotif('Yazı yayınlandı!')">Yayınla</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sidebar Settings -->
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <div class="card">
+                <div class="card-header"><span class="card-title">Yayın Ayarları</span></div>
+                <div class="card-body">
+                  <div class="form-group"><label class="form-label">Durum</label>
+                    <select class="form-control"><option>Taslak</option><option>Yayında</option><option>Planlandı</option></select>
+                  </div>
+                  <div class="form-group"><label class="form-label">Yayın Tarihi</label>
+                    <input class="form-control" type="date" value="2026-03-17">
+                  </div>
+                  <div class="form-group"><label class="form-label">Yazar</label>
+                    <input class="form-control" type="text" value="Av. Mahmut Kaya">
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header"><span class="card-title">Kategori</span></div>
+                <div class="card-body">
+                  <div style="display:flex;flex-wrap:wrap;gap:6px">
+                    <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-main);cursor:pointer"><input type="checkbox" checked> Aile Hukuku</label>
+                    <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-main);cursor:pointer"><input type="checkbox"> İş Hukuku</label>
+                    <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-main);cursor:pointer"><input type="checkbox"> Miras Hukuku</label>
+                    <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-main);cursor:pointer"><input type="checkbox"> Ceza Hukuku</label>
+                    <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-main);cursor:pointer"><input type="checkbox"> Ticaret Hukuku</label>
+                    <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-main);cursor:pointer"><input type="checkbox"> Gayrimenkul</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header"><span class="card-title">SEO Ayarları</span></div>
+                <div class="card-body">
+                  <div class="form-group"><label class="form-label">Meta Başlık</label><input class="form-control" type="text" placeholder="SEO başlığı..."></div>
+                  <div class="form-group"><label class="form-label">Meta Açıklama</label><textarea class="form-control" rows="2" placeholder="Arama motoru açıklaması..."></textarea></div>
+                  <div class="form-group"><label class="form-label">Anahtar Kelimeler</label><input class="form-control" type="text" placeholder="boşanma, avukat, hukuk..."></div>
+                  <div class="form-group"><label class="form-label">URL Slug</label><input class="form-control" type="text" placeholder="bosanma-hukuku-rehberi"></div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header"><span class="card-title">Öne Çıkan Görsel</span></div>
+                <div class="card-body">
+                  <div style="border:2px dashed var(--border);border-radius:8px;padding:24px;text-align:center;cursor:pointer;background:var(--cream)" onclick="showNotif('Görsel yükleme açıldı')">
+                    <div style="font-size:24px;margin-bottom:8px">📷</div>
+                    <div style="font-size:12px;color:var(--text-muted)">Görsel yüklemek için tıklayın</div>
+                    <div style="font-size:10px;color:var(--text-light);margin-top:4px">JPG, PNG · Max 2MB</div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-outline" onclick="showBlogTab('list')" style="justify-content:center">← Listeye Dön</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEO -->
+      <div class="view" id="view-seo">
+        <div class="section-row"><div class="section-title">SEO & Analitik</div></div>
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-label">Aylık Ziyaretçi</div><div class="stat-value">8.4K</div><div class="stat-sub"><span class="stat-up">↑ 23%</span></div></div>
+          <div class="stat-card stat-success"><div class="stat-label">Organik Trafik</div><div class="stat-value">64<span style="font-size:16px">%</span></div><div class="stat-sub"><span class="stat-up">↑ 5%</span></div></div>
+          <div class="stat-card stat-info"><div class="stat-label">Ort. Süre</div><div class="stat-value">3:42</div><div class="stat-sub">dakika</div></div>
+          <div class="stat-card"><div class="stat-label">Chatbot Dönüşüm</div><div class="stat-value">18<span style="font-size:16px">%</span></div><div class="stat-sub"><span class="stat-up">↑ 4%</span></div></div>
+        </div>
+        <div class="card"><div class="card-header"><span class="card-title">SEO Sayfa Skorları</span></div><div class="card-body">
+          <table class="data-table"><thead><tr><th>Sayfa</th><th>Meta Başlık</th><th>Anahtar Kelimeler</th><th>Skor</th></tr></thead><tbody>
+            <tr><td>Ana Sayfa</td><td style="color:var(--text-muted);font-size:12px">Hukuk Bürosu | Avukat Danışma</td><td><span class="badge badge-navy">avukat, hukuk bürosu</span></td><td><span class="badge badge-success">92/100</span></td></tr>
+            <tr><td>Hizmetler</td><td style="color:var(--text-muted);font-size:12px">Hukuki Hizmetler | Boşanma...</td><td><span class="badge badge-navy">boşanma, iş hukuku</span></td><td><span class="badge badge-warning">78/100</span></td></tr>
+            <tr><td>Blog</td><td style="color:var(--text-muted);font-size:12px">Hukuk Rehberi | Güncel Haberler</td><td><span class="badge badge-navy">hukuk bilgisi, rehber</span></td><td><span class="badge badge-warning">71/100</span></td></tr>
+            <tr><td>İletişim</td><td style="color:var(--text-muted);font-size:12px">Avukatla İletişim | Randevu</td><td><span class="badge badge-navy">randevu, iletişim</span></td><td><span class="badge badge-success">88/100</span></td></tr>
+          </tbody></table>
+        </div></div>
+      </div>
+
+      <!-- FINANCE -->
+      <div class="view" id="view-finance">
+        <div class="section-row"><div class="section-title">Finansal Yönetim</div></div>
+        <div class="stats-grid">
+          <div class="stat-card stat-success"><div class="stat-label">Bu Ay Gelir</div><div class="stat-value">₺284K</div><div class="stat-sub"><span class="stat-up">↑ 12%</span></div></div>
+          <div class="stat-card"><div class="stat-label">Bekleyen Tahsilat</div><div class="stat-value">₺67K</div><div class="stat-sub">8 fatura</div></div>
+          <div class="stat-card stat-danger"><div class="stat-label">Giderler</div><div class="stat-value">₺89K</div></div>
+          <div class="stat-card stat-success"><div class="stat-label">Net Kar</div><div class="stat-value">₺195K</div><div class="stat-sub"><span class="stat-up">↑ 18%</span></div></div>
+        </div>
+        <div class="card"><div class="card-header"><span class="card-title">Son Faturalar</span><button class="btn btn-gold" style="font-size:12px;padding:6px 12px" onclick="showNotif('Fatura oluşturuldu')">+ Fatura</button></div><div class="card-body">
+          <table class="data-table"><thead><tr><th>Fatura No</th><th>Müvekkil</th><th>Hizmet</th><th>Tutar</th><th>Durum</th></tr></thead><tbody>
+            <tr><td style="font-weight:500">#F-2026-089</td><td>Z. Kara</td><td>İş Davası Temsil</td><td style="font-weight:600;color:var(--navy)">₺18.500</td><td><span class="badge badge-success">Ödendi</span></td></tr>
+            <tr><td style="font-weight:500">#F-2026-088</td><td>M. Arslan</td><td>Aile Danışmanlığı</td><td style="font-weight:600;color:var(--navy)">₺8.200</td><td><span class="badge badge-warning">Bekliyor</span></td></tr>
+            <tr><td style="font-weight:500">#F-2026-087</td><td>ABC Ltd.</td><td>Ticaret Hukuku</td><td style="font-weight:600;color:var(--navy)">₺45.000</td><td><span class="badge badge-danger">Gecikmiş</span></td></tr>
+            <tr><td style="font-weight:500">#F-2026-086</td><td>F. Demir</td><td>Sigorta Davası</td><td style="font-weight:600;color:var(--navy)">₺12.000</td><td><span class="badge badge-success">Ödendi</span></td></tr>
+          </tbody></table>
+        </div></div>
+      </div>
+
+    </div><!-- /content -->
+  </main>
+</div>
+
+<!-- NOTIFICATION -->
+<div class="notif-popup hidden" id="notif">
+  <span style="font-size:16px;color:var(--gold)">✓</span>
+  <span id="notif-text">İşlem tamamlandı</span>
+</div>
+
+<script>
+const views = {
+  'dashboard':'Genel Bakış','chatbot':'Chatbot Yönetimi','chatbot-config':'Chatbot Ayarları',
+  'cases':'Dava Yönetimi','clients':'Müvekkil Yönetimi','appointments':'Randevu Takvimi',
+  'documents':'Belge Yönetimi','website':'Web Sayfaları','blog':'Blog Yönetimi',
+  'seo':'SEO & Analitik','finance':'Finansal Yönetim'
+};
+
+function showView(id) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  var el = document.getElementById('view-' + id);
+  if (el) el.classList.add('active');
+  document.getElementById('page-title').textContent = views[id] || id;
+  document.querySelectorAll('.nav-item').forEach(function(n) {
+    n.classList.remove('active');
+    var oc = n.getAttribute('onclick');
+    if (oc && oc.indexOf("'"+id+"'") !== -1) n.classList.add('active');
+  });
+  if (id === 'blog') { showBlogTab('list'); }
+}
+
+function showBlogTab(tab) {
+  var list = document.getElementById('blog-list-tab');
+  var editor = document.getElementById('blog-editor-tab');
+  if (tab === 'list') { list.style.display = 'block'; editor.style.display = 'none'; }
+  else { list.style.display = 'none'; editor.style.display = 'block'; }
+}
+
+function showNotif(msg) {
+  var n = document.getElementById('notif');
+  document.getElementById('notif-text').textContent = msg;
+  n.classList.remove('hidden');
+  clearTimeout(window._nt);
+  window._nt = setTimeout(function(){ n.classList.add('hidden'); }, 3000);
+}
+
+function toggleFaq(el) {
+  el.classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
+
+function switchSession(el) {
+  document.querySelectorAll('.session-item').forEach(function(s){ s.classList.remove('active'); });
+  el.classList.add('active');
+}
+
+function sendAdminMsg() {
+  var inp = document.getElementById('admin-chat-input');
+  var txt = inp.value.trim();
+  if (!txt) return;
+  var msgs = document.getElementById('chat-msgs');
+  var div = document.createElement('div');
+  div.className = 'msg user';
+  div.innerHTML = '<div class="msg-avatar user-avatar-msg" style="background:var(--gold);color:var(--navy)">MK</div><div><div class="msg-bubble">'+txt+'</div><div class="msg-time">Şimdi · Av. M. Kaya</div></div>';
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+  inp.value = '';
+  showNotif('Mesaj gönderildi');
+}
+
+function filterCat(el, cat) {
+  document.querySelectorAll('.category-tag').forEach(function(t){ t.classList.remove('active'); });
+  el.classList.add('active');
+  showNotif('Filtre: ' + el.textContent);
+}
+
+function formatDoc(cmd) {
+  document.execCommand(cmd, false, null);
+  document.getElementById('blog-content').focus();
+}
+</script>
+</body>
+</html>

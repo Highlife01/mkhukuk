@@ -1,0 +1,504 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Our Services",
+    "blog": "Blog",
+    "faq": "F.A.Q.",
+    "aiAssistant": "AI Assistant",
+    "database": "Court DB",
+    "tools": "Legal Tools",
+    "glossary": "Glossary",
+    "login": "Login",
+    "contact": "Communication"
+  },
+  "brand": {
+    "name": "MK LAW | AV. MAHMUT KAYA",
+    "subtitle": "Law & Consultancy"
+  },
+  "home": {
+    "badge": "Turkey's Most Comprehensive Digital Law Platform",
+    "heroTitle1": "Digital",
+    "heroTitle2": "Transformation in Law",
+    "heroDesc": "We accelerate your legal processes with our AI assistant, more than 2 million Supreme Court decisions, and expert staff support.",
+    "ctaAi": "START AI ASSISTANT",
+    "ctaServices": "OUR SERVICES",
+    "aiBadge": "AI-POWERED LAW",
+    "aiTitle1": "The Future of Law",
+    "aiTitle2": "Experience is Here",
+    "aiDesc": "With the state-of-the-art AI used by Av. Mahmut Kaya,",
+    "aiDescBold": " legal analysis in seconds ",
+    "aiDescEnd": "and instant access to precedents.",
+    "aiFeature1": "24/7 Active Legal Consultancy",
+    "aiFeature2": "2M+ Court Decision Analysis",
+    "aiFeature3": "Petition and Contract Drafting",
+    "aiFeature4": "Complex Regulation Summarization",
+    "startChat": "Start Chat",
+    "servicesBadge": "OUR EXPERTISE",
+    "servicesTitle": "Comprehensive Legal Solutions",
+    "service1Title": "Family and Divorce",
+    "service1Desc": "Sensitive and professional support in divorce, custody, and property division.",
+    "service2Title": "Labor and Social Security",
+    "service2Desc": "Expert solutions for compensation, reinstatement, and labor disputes.",
+    "service3Title": "Real Estate and Construction",
+    "service3Desc": "All legal consultancy processes related to deeds, rentals, and construction.",
+    "service4Title": "Criminal Law",
+    "service4Desc": "Professional defense services in high criminal and investigation stages.",
+    "details": "View Details",
+    "stats": {
+      "decisions": "15+ Years of Experience",
+      "users": "2500+ Successful Cases",
+      "lawyers": "5 Expert Lawyers",
+      "success": "15+ Areas of Expertise"
+    },
+    "contact": {
+      "badge": "Legal Consultancy",
+      "title1": "Contact us,",
+      "title2": "Let's Manage Your Process Together.",
+      "desc": "Fill out the form for your legal questions or to get a preliminary evaluation of your case. Our expert lawyers will get back to you as soon as possible.",
+      "phoneLabel": "Telephone",
+      "emailLabel": "Email",
+      "formTitle": "Send Message",
+      "formDesc": "You can contact us by filling in all fields completely.",
+      "successTitle": "Your Message Received!",
+      "successDesc": "We will get back to you as soon as possible through our communication channels.",
+      "errorTitle": "An Error Occurred",
+      "errorDesc": "Your message could not be sent. Please try again later.",
+      "namePlaceholder": "Your Name and Surname *",
+      "phonePlaceholder": "Your Phone Number",
+      "emailPlaceholder": "Your Email Address *",
+      "subjectPlaceholder": "Subject",
+      "messagePlaceholder": "Your message *",
+      "submittingBtn": "Sending...",
+      "submitBtn": "Submit Form",
+      "kvkkNote": "By clicking the Send button, you confirm that you have read and accepted the KVKK Information Text."
+    },
+    "service5Title": "Information and Technology",
+    "service5Desc": "Expertise in cybercrime, e-commerce and protection of digital assets.",
+    "service6Title": "Execution and Bankruptcy",
+    "service6Desc": "Management of receivables collection, seizure and debt restructuring processes.",
+    "service7Title": "Consumer Law",
+    "service7Desc": "Full support in defective goods, services and consumer arbitration committee processes.",
+    "service8Title": "Contract Management",
+    "service8Desc": "Preparation, review and revision of commercial and individual contracts."
+  },
+  "whatsapp": {
+    "title": "WhatsApp Legal Assistant",
+    "badge": "NEW",
+    "desc": "Av. Mahmut Kaya AI-powered legal assistant is now in your pocket via WhatsApp. You can start using it immediately by choosing one of the services below.",
+    "option1Title": "Get Legal Support",
+    "option1Desc": "Get instant expert support for your legal questions",
+    "option2Title": "Search Court Decisions",
+    "option2Desc": "Search for precedents and jurisprudence",
+    "option3Title": "Prepare Petitions",
+    "option3Desc": "Create fast and professional petitions with AI",
+    "option4Title": "Contract Preparation",
+    "option4Desc": "Create customized contract templates",
+    "btnStart": "Start on WhatsApp"
+  },
+  "decisions": {
+    "badge": "Jurisprudence Database",
+    "title": "Court Decisions",
+    "desc": "Turkey's most comprehensive decision search engine, strengthened by universal principles of law and current Supreme Court jurisprudence.",
+    "searchPlaceholder": "Search by content, chamber, case no or keyword...",
+    "btnSearch": "Search",
+    "filterTitle": "Filter",
+    "filterChambers": "Chambers",
+    "filterYear": "Year",
+    "filterClear": "Clear Filters",
+    "ctaTitle": "Need Detailed Analysis?",
+    "ctaDesc": "Analyze and summarize decisions in seconds with our AI assistant.",
+    "ctaBtn": "Open AI Assistant",
+    "listHeading": "Decisions Listed",
+    "sortBy": "Sort by: Newest",
+    "viewContent": "View Decision Text",
+    "downloadPdf": "Download PDF",
+    "noResults": "No Results Found",
+    "noResultsDesc": "No decisions found matching your criteria. Please try different keywords.",
+    "stats": {
+      "total": "Total Decisions",
+      "weekly": "Weekly Update",
+      "speed": "Search Speed",
+      "accuracy": "Accuracy Rate"
+    }
+  },
+  "services_page": {
+    "title": "Our Areas of Expertise",
+    "desc": "As MK Law, we provide a wide range of legal consultancy services with global standards and local experience.",
+    "ctaTitle": "Need Legal Help?",
+    "ctaDesc": "We produce innovative solutions for all your commercial and personal legal processes with our expert staff.",
+    "ctaBtnConsult": "Consult a Lawyer",
+    "ctaBtnContact": "Contact Us",
+    "badge": "Fields of Activity",
+    "title1": "Expertise",
+    "title2": "Our areas",
+    "stat1": "Field of Activity",
+    "stat2": "Successful Case",
+    "stat3": "Years of Experience",
+    "allAreas": "All Areas",
+    "featuredAreas": "Featured Areas of Expertise",
+    "allAreasSub": "All Fields of Activity",
+    "detailBtn": "Review",
+    "whyUsTitle": "From where",
+    "whyUsTitleSpan": "MK Law",
+    "whyUsDesc": "We manage your legal processes safely with our experienced staff, technology-oriented approach and client satisfaction-oriented service approach.",
+    "whyUsPoint1": "20+ years of experienced lawyer staff specialized in all fields",
+    "whyUsPoint2": "AI-powered legal analysis and preliminary evaluation",
+    "whyUsPoint3": "Transparent process monitoring and regular information",
+    "whyUsPoint4": "Result-oriented strategy and rapid response",
+    "whyUsPoint5": "National and international legal network",
+    "freeConsultTitle": "Free Pre-Assessment",
+    "freeConsultDesc": "Contact us to get a free preliminary evaluation of your legal process.",
+    "aiStartBtn": "Start with AI Assistant"
+  },
+  "services_list": {
+    "banking": {
+      "title": "Banking and Finance",
+      "desc": "Loan agreements, project finance, and banking regulation compliance processes."
+    },
+    "mergers": {
+      "title": "Mergers and Acquisitions",
+      "desc": "Management of company mergers, share transfers, and due diligence processes."
+    },
+    "energy": {
+      "title": "Energy & Infrastructure",
+      "desc": "Legal support for energy projects, licensing processes, and infrastructure investments."
+    },
+    "esg": {
+      "title": "ESG (Environmental, Social and Governance)",
+      "desc": "Sustainability reporting and ESG criteria compliance consultancy."
+    },
+    "ip": {
+      "title": "Intellectual Property and Tech",
+      "desc": "Trademark, patent, copyright, and technology transfer agreements."
+    },
+    "fintech": {
+      "title": "FinTech",
+      "desc": "Payment systems, digital banking, and financial technology regulations."
+    },
+    "realestate": {
+      "title": "Real Estate Law",
+      "desc": "Expertise in real estate sales, title deed examinations, and construction law."
+    },
+    "labor": {
+      "title": "Labor Law",
+      "desc": "Individual and collective labor law, contract management, and dispute resolution."
+    },
+    "equity": {
+      "title": "Private Equity Funds",
+      "desc": "Consultancy for fund establishment, investment management, and exit strategies."
+    },
+    "competition": {
+      "title": "Competition Law",
+      "desc": "Competition authority notifications, exemption applications, and violations."
+    },
+    "health": {
+      "title": "Health Law",
+      "desc": "Pharmaceutical and medical device legislation, malpractice cases, and regulations."
+    },
+    "capital": {
+      "title": "Capital Markets Law",
+      "desc": "Consultancy for IPOs, issuance processes, and CMB regulation compliance."
+    },
+    "corporate": {
+      "title": "Corporate Law",
+      "desc": "General assembly processes, board responsibilities, and corporate restructuring."
+    },
+    "compliance": {
+      "title": "Compliance and Ethics",
+      "desc": "Anti-corruption, internal investigations, and ethics compliance processes."
+    },
+    "intltrade": {
+      "title": "International Trade",
+      "desc": "Customs legislation, import-export regimes, and international contracts."
+    },
+    "dispute": {
+      "title": "Dispute Resolution",
+      "desc": "Litigation tracking, arbitration processes, and alternative dispute resolution."
+    },
+    "tax": {
+      "title": "Tax",
+      "desc": "Tax planning, tax litigation, and international taxation strategies."
+    },
+    "kvkk": {
+      "title": "Personal Data Protection",
+      "desc": "GDPR/KVKK compliance processes, data processing policies, and audits."
+    },
+    "wealth": {
+      "title": "Wealth and Asset Management",
+      "desc": "Family business constitution, inheritance planning, and asset structuring."
+    },
+    "whitecollar": {
+      "title": "White Collar Crimes",
+      "desc": "Anti-corruption, internal audits, and economic criminal law processes."
+    },
+    "family": {
+      "title": "Family and Divorce Law",
+      "desc": "Contested and uncontested divorce, custody, alimony, and property division."
+    },
+    "criminal": {
+      "title": "Criminal Law",
+      "desc": "High criminal cases, investigation follow-up, and professional defense services."
+    },
+    "inheritance": {
+      "title": "Inheritance Law",
+      "desc": "Will preparation, inheritance distribution, and disclaimer of inheritance cases."
+    },
+    "execution": {
+      "title": "Execution and Bankruptcy",
+      "desc": "Debt collection, execution proceedings, precautionary attachment, and bankruptcy."
+    },
+    "maritime": {
+      "title": "Sea trade",
+      "desc": "Ship buying and selling, freight contracts and maritime accident law."
+    },
+    "it": {
+      "title": "IT & Software",
+      "desc": "Expertise in e-commerce, cybercrime and software licensing agreements."
+    },
+    "insurance": {
+      "title": "Insurance Law",
+      "desc": "Compensation claims, recourse cases and insurance policy disputes."
+    },
+    "aviation": {
+      "title": "Law and Aviation",
+      "desc": "Air transport contracts and aviation regulations consultancy."
+    }
+  },
+  "about": {
+    "badge": "About Us",
+    "title1": "Since 2010",
+    "title2": "Leader in Law",
+    "desc": "Since its establishment, MK Law has been providing comprehensive legal consultancy services to Turkey's and the world's leading domestic and foreign companies, financial institutions, and individual clients.",
+    "stats": {
+      "exp": "15+",
+      "expLabel": "Years of Experience",
+      "lawyers": "5",
+      "lawyersLabel": "Expert Lawyers"
+    },
+    "valuesTitle": "Our Values",
+    "values": {
+      "v1": {
+        "title": "Integrity & Transparency",
+        "desc": "We embrace the principle of honesty and absolute transparency in every relationship we establish with our clients."
+      },
+      "v2": {
+        "title": "Perfectionism",
+        "desc": "We produce innovative solutions for the most complex legal problems at the highest professional standards."
+      },
+      "v3": {
+        "title": "Diversity",
+        "desc": "We believe that different perspectives and an inclusive working environment are the keys to our success."
+      },
+      "v4": {
+        "title": "Client Centricity",
+        "desc": "At the center of our activities are always our clients' strategic goals and security."
+      }
+    },
+    "missionTitle": "Global Vision, Local Power",
+    "missionDesc": "\"Our vision is to maintain the concept of a leading law firm that can respond to every legal need in Turkey at the highest level by making our clients' needs compatible with developing world standards.\"",
+    "journey": {
+      "title": "Our journey",
+      "m1": "MK Law office was established",
+      "m2": "Expansion in the fields of real estate and commercial law",
+      "m3": "Digital legal consultancy platform launch",
+      "m4": "AI-powered legal assistant integration",
+      "m5": "Industry leadership with 500+ successful cases"
+    },
+    "mission": {
+      "item1": "Using the power of technology and law together",
+      "item2": "Keeping client satisfaction at the highest level",
+      "item3": "Providing a transparent and fair legal process"
+    },
+    "workWithUs": {
+      "title": "Work With Us",
+      "desc": "We are with you in your legal processes with our experienced team.",
+      "contactBtn": "Contact Us",
+      "servicesBtn": "Our services"
+    }
+  },
+  "faq": {
+    "badge": "Information Support",
+    "title": "Frequently Asked Questions",
+    "desc": "You can find the most frequently asked questions about your legal processes and our transparent working principles here.",
+    "questions": {
+      "q1": {
+        "q": "In which legal fields do you provide specialized services?",
+        "a": "As MK Law, we provide services in a wide range. We provide services in 26 different areas of expertise, especially corporate company law, real estate law, family and divorce cases, criminal law, inheritance distribution and technology law (KVKK, Fintech)."
+      },
+      "q2": {
+        "q": "How does the first meeting take place and is it paid?",
+        "a": "After making an appointment by phone, WhatsApp or our website, we hold video meetings at our office in Istanbul or via online platforms. Our preliminary meetings where we provide general information about the process to our prospective clients are free of charge."
+      },
+      "q3": {
+        "q": "How are legal consultancy fees determined?",
+        "a": "Our pricing policy is transparent. Consultancy fees vary according to the type of case, its complexity and the effort to be spent. Based on the minimum wage tariffs of the Union of Turkish Bar Associations and the Istanbul Bar Association, we clarify all costs before providing the service."
+      },
+      "q4": {
+        "q": "How long will my case take to conclude?",
+        "a": "Case durations vary according to the workload of the court and the nature of the file. Local court processes take an average of 8-18 months. After each hearing, we inform our clients with written reports and meticulously follow the procedural procedures for the fastest conclusion of the process."
+      },
+      "q5": {
+        "q": "Do you have continuous consultancy (advisory) services for companies?",
+        "a": "Yes, we provide continuous legal consultancy services to many domestic and foreign companies on a monthly basis. In this context, we provide 'boutique' solutions covering contract management, labor law compliance, KVKK audits and general corporate management processes."
+      },
+      "q6": {
+        "q": "Can I benefit from legal aid (free lawyer)?",
+        "a": "Persons whose economic situation does not allow them to pay the lawyer's fee may request the appointment of a free lawyer by applying to the Bar Association (Legal Aid Office) of their province. We provide guidance services to applicants in this regard."
+      }
+    },
+    "cta1": {
+      "title": "Call Now",
+      "desc": "Do you need urgent legal help? You can reach us 24/7."
+    },
+    "cta2": {
+      "title": "WhatsApp Support",
+      "desc": "You can send a message to get quick information about your file.",
+      "btn": "Send Message"
+    }
+  },
+  "footer": {
+    "desc": "Turkey's leading digital law platform. We manage your legal processes with our expert staff and AI support.",
+    "quickAccess": "Quick Access",
+    "corporate": "Corporate",
+    "legal": "Legal",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Follow the developments in the world of law.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "rights": "Av. Mahmut Kaya Law & Consultancy. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "kvkk": "GDPR Compliance",
+    "cookies": "Cookie Policy"
+  },
+  "chat": {
+    "title": "MK Law AI Assistant",
+    "online": "Online",
+    "welcome": "Hello! I am MK Law AI. I can guide you through your legal processes. How can I help you?",
+    "welcomeExample2": "How long does a divorce take? What are my compensation rights?",
+    "placeholder": "Type your question here...",
+    "typing": "It says..."
+  },
+  "dashboard": {
+    "title": "Legal Dashboard",
+    "welcome": "Welcome, Attorney",
+    "stats": {
+      "activeCases": "Active Cases",
+      "hearings": "Upcoming Hearings",
+      "tasks": "Pending Tasks",
+      "clients": "Total Clients",
+      "totalRevenue": "Total Collection",
+      "pendingReceivables": "Receivables to be Collected",
+      "upcomingCriticalCases": "Upcoming Critical Case",
+      "winRate": "Win Rate"
+    },
+    "recentActivities": "Recent Activities",
+    "activities": {
+      "caseAdded": "New case file added",
+      "hearingReminder": "Reminder for tomorrow's hearing",
+      "documentUploaded": "New petition uploaded",
+      "aiConsult": "Case analysis performed with AI Assistant"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "newCase": "Open New Case",
+      "searchDecisions": "Search Decisions",
+      "aiAnalysis": "AI Analysis",
+      "appointments": "Appointments",
+      "newClient": "Add New Client"
+    },
+    "tabs": {
+      "overview": "Overview",
+      "chatbot": "Chatbot Management",
+      "cases": "Case Management",
+      "clients": "Client Management",
+      "appointments": "Appointments",
+      "documents": "Documents",
+      "website": "Website Pages",
+      "blog": "Blog Management",
+      "seo": "SEO & Analytics",
+      "finance": "Financial Management",
+      "management": "Site Management",
+      "team": "Team Management"
+    },
+    "management": {
+      "title": "Site Content Management",
+      "heroSection": "Hero Section (Home)",
+      "servicesSection": "Service Portfolio",
+      "saveBtn": "Publish Changes",
+      "heroTitle": "Main Title",
+      "heroTitlePlaceholder": "Digital Transformation in Law",
+      "heroDesc": "Sub-title / Description",
+      "preview": "Live Preview"
+    },
+    "chatbot": {
+      "title": "Chatbot Management",
+      "sessions": "Active Sessions",
+      "configuration": "Chatbot Config",
+      "history": "Message History"
+    },
+    "finance": {
+      "title": "Financial Management",
+      "income": "Monthly Income",
+      "pending": "Pending Collection",
+      "expenses": "Expenses",
+      "netProfit": "Net Profit"
+    },
+    "tools": {
+      "categories": {
+        "calculation": "CALCULATION",
+        "labor": "LABOR LAW",
+        "ai": "ARTIFICIAL INTELLIGENCE",
+        "document": "DOCUMENT"
+      },
+      "title": "Legal Tools Portal",
+      "subtitle": "Access all calculation and management tools from a single point.",
+      "searchPlaceholder": "Search for vehicle..."
+    }
+  },
+  "auth": {
+    "success": "Login Successful! Redirecting to dashboard.",
+    "error": "Login Failed. Please check your credentials."
+  },
+  "guide": {
+    "badge": "Legal Guide",
+    "title": "Information Center & Guides",
+    "searchPlaceholder": "Search for topic or keyword...",
+    "back": "Go back",
+    "faq": "Frequently Asked Questions",
+    "expertTips": "Expert Advice",
+    "cities": "City Based Advertisements (Archive)"
+  },
+  "ai": {
+    "badge": "Artificial Intelligence Supported Legal Assistant",
+    "title": "Av. Mahmut Kaya",
+    "titleHighlight": "AI Assistant",
+    "desc": "Write your questions or upload your documents; Let's search for legal analysis and precedent decisions.",
+    "quickTopics": "Quick Start",
+    "topic1": "Divorce",
+    "topic2": "Workers' Receivables",
+    "topic3": "Rental Disputes",
+    "topic4": "Inheritance Sharing",
+    "topic5": "Compensation Calculation",
+    "topic6": "Contract Analysis",
+    "welcome": "Hello! How can I help you?",
+    "welcomeExample1": "How do I calculate my salary?",
+    "welcomeExample2": "Can you find a precedent decision?",
+    "placeholder": "Type your question here or drag a document...",
+    "disclaimer": "Note: AI Assistant is for informational purposes only; It is not a substitute for legal advice."
+  },
+  "contact": {
+    "title": "Communication",
+    "desc": "We are here to provide you with the best support in your legal processes. You can contact us via the form or communication channels below.",
+    "heroTitle1": "Contact Us",
+    "heroTitle2": "pass",
+    "phoneLabel": "Telephone",
+    "phoneDesc": "You can call for an appointment and preliminary meeting between 09:00 - 18:00 on weekdays.",
+    "emailLabel": "Email",
+    "emailDesc": "Write to us for file submission and detailed questions. We get back to you within 24 hours at the latest.",
+    "whatsappLabel": "WhatsApp Support",
+    "whatsappDesc": "Our WhatsApp line is active for urgent legal support or fast document submission.",
+    "whatsappBtn": "Go to WhatsApp"
+  }
+}

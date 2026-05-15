@@ -1,0 +1,503 @@
+{
+  "nav": {
+    "home": "صفحه اصلی",
+    "about": "درباره ما",
+    "services": "خدمات ما",
+    "blog": "بلاگ",
+    "faq": "سوالات متداول",
+    "aiAssistant": "دستیار هوشمند",
+    "database": "پایگاه داده",
+    "tools": "ابزارهای حقوقی",
+    "glossary": "واژه‌نامه",
+    "login": "ورود",
+    "contact": "ارتباط"
+  },
+  "brand": {
+    "name": "MK HUKUK",
+    "subtitle": "مشاوره و تکنولوژی"
+  },
+  "home": {
+    "badge": "جامع‌ترین پلتفرم حقوقی دیجیتال در ترکیه",
+    "heroTitle1": "تحول دیجیتال",
+    "heroTitle2": "در حقوق",
+    "heroDesc": "ما فرآیندهای حقوقی شما را با کمک هوش مصنوعی، بیش از ۲ میلیون رای دادگاه و حمایت کارشناسان تسریع می‌کنیم.",
+    "ctaAi": "شروع دستیار هوشمند",
+    "ctaServices": "خدمات ما",
+    "stats": {
+      "decisions": "۱۵+ سال تجربه",
+      "users": "۲۵۰۰+ پرونده موفق",
+      "lawyers": "۵ وکیل متخصص",
+      "success": "۱۵+ حوزه تخصصی"
+    },
+    "aiBadge": "YAPAY ZEKA DESTEKLİ HUKUK",
+    "aiTitle1": "Geleceğin Hukuk",
+    "aiTitle2": "Deneyimi Burada",
+    "aiDesc": "MK Hukuk'un geliştirdiği son teknoloji yapay zeka ile",
+    "aiDescBold": " saniyeler içinde hukuki analiz ",
+    "aiDescEnd": "yapabilir ve emsal kararlara anında ulaşabilirsiniz.",
+    "aiFeature1": "7/24 Aktif Hukuki Danışmanlık",
+    "aiFeature2": "2M+ Yargıtay Karar Analizi",
+    "aiFeature3": "Dilekçe ve Sözleşme Taslaklama",
+    "aiFeature4": "Karmaşık Mevzuat Özetleme",
+    "startChat": "Sohbete Başla",
+    "servicesBadge": "UZMANLIK ALANLARIMIZ",
+    "servicesTitle": "Kapsamlı Hukuki Çözümler",
+    "service1Title": "Aile ve Boşanma",
+    "service1Desc": "Boşanma, velayet ve mal paylaşımı süreçlerinde hassas ve profesyonel destek.",
+    "service2Title": "İş ve Sosyal Güvenlik",
+    "service2Desc": "Tazminat, işe iade ve işçi-işveren uyuşmazlıklarında uzman çözümler.",
+    "service3Title": "Gayrimenkul ve İnşaat",
+    "service3Desc": "Tapu, kira ve inşaat projeleriyle ilgili tüm hukuki danışmanlık süreçleri.",
+    "service4Title": "Ceza Hukuku",
+    "service4Desc": "Ağır ceza ve soruşturma aşamalarında profesyonel savunma hizmetleri.",
+    "details": "Detayları Gör",
+    "contact": {
+      "badge": "مشاوره حقوقی",
+      "title1": "تماس با ما،",
+      "title2": "بیایید روند خود را با هم مدیریت کنیم.",
+      "desc": "فرم سوالات حقوقی خود را پر کنید یا ارزیابی اولیه از پرونده خود را دریافت کنید. وکلای متخصص ما در اسرع وقت با شما تماس خواهند گرفت.",
+      "phoneLabel": "تلفن",
+      "emailLabel": "ایمیل",
+      "formTitle": "ارسال پیام",
+      "formDesc": "با پر کردن کامل تمام فیلدها می توانید با ما تماس بگیرید.",
+      "successTitle": "پیام شما دریافت شد!",
+      "successDesc": "ما در اسرع وقت از طریق راه های ارتباطی با شما تماس خواهیم گرفت.",
+      "errorTitle": "خطایی رخ داد",
+      "errorDesc": "پیام شما ارسال نشد. لطفاً بعداً دوباره امتحان کنید.",
+      "namePlaceholder": "نام و نام خانوادگی شما *",
+      "phonePlaceholder": "شماره تلفن شما",
+      "emailPlaceholder": "آدرس ایمیل شما *",
+      "subjectPlaceholder": "موضوع",
+      "messagePlaceholder": "پیام شما *",
+      "submittingBtn": "ارسال...",
+      "submitBtn": "ارسال فرم",
+      "kvkkNote": "با کلیک بر روی دکمه ارسال، تأیید می کنید که متن اطلاعات KVKK را خوانده و پذیرفته اید."
+    },
+    "service5Title": "اطلاعات و فناوری",
+    "service5Desc": "تخصص در جرایم سایبری، تجارت الکترونیک و حفاظت از دارایی های دیجیتال.",
+    "service6Title": "اعدام و ورشکستگی",
+    "service6Desc": "مدیریت فرآیندهای جمع آوری مطالبات، توقیف و تجدید ساختار بدهی.",
+    "service7Title": "قانون مصرف کننده",
+    "service7Desc": "پشتیبانی کامل در فرآیندهای کمیته داوری کالاها، خدمات و مصرف کنندگان معیوب.",
+    "service8Title": "مدیریت قرارداد",
+    "service8Desc": "تهیه، بررسی و بازنگری قراردادهای تجاری و فردی."
+  },
+  "dashboard": {
+    "title": "داشبورد حقوقی",
+    "welcome": "خوش آمدید، وکیل",
+    "stats": {
+      "activeCases": "پرونده‌های فعال",
+      "hearings": "جلسات آینده",
+      "tasks": "وظایف معلق",
+      "clients": "کل موکلان",
+      "totalRevenue": "کل مجموعه",
+      "pendingReceivables": "مطالبات قابل وصول",
+      "upcomingCriticalCases": "پرونده بحرانی آینده",
+      "winRate": "نرخ برد"
+    },
+    "tabs": {
+      "overview": "نمای کلی",
+      "management": "مدیریت سایت",
+      "chatbot": "Chatbot Yönetimi",
+      "cases": "Dava Yönetimi",
+      "clients": "Müvekkil Yönetimi",
+      "appointments": "Randevu Takvimi",
+      "documents": "Belge Yönetimi",
+      "website": "Web Sayfaları",
+      "blog": "Blog Yönetimi",
+      "seo": "SEO & Analitik",
+      "finance": "Finansal Yönetim",
+      "team": "مدیریت تیم"
+    },
+    "management": {
+      "title": "مدیریت محتوا",
+      "saveBtn": "انتشار تغییرات",
+      "heroSection": "Hero Bölümü (Ana Sayfa)",
+      "servicesSection": "Hizmet Portföyü",
+      "heroTitle": "Ana Başlık",
+      "heroDesc": "Alt Başlık / Açıklama",
+      "preview": "Canlı Önizleme"
+    },
+    "recentActivities": "Son Aktiviteler",
+    "activities": {
+      "caseAdded": "Yeni bir dava dosyası eklendi",
+      "hearingReminder": "Yarınki duruşma için hatırlatma",
+      "documentUploaded": "Yeni bir dilekçe yüklendi",
+      "aiConsult": "AI Asistan ile dosya analizi yapıldı"
+    },
+    "quickActions": {
+      "title": "Hızlı İşlemler",
+      "newCase": "Yeni Dosya Aç",
+      "searchDecisions": "Karar Ara",
+      "aiAnalysis": "AI Analiz",
+      "appointments": "Randevular",
+      "newClient": "مشتری جدید اضافه کنید"
+    },
+    "chatbot": {
+      "title": "Chatbot Yönetimi",
+      "sessions": "Aktif Oturumlar",
+      "configuration": "Chatbot Ayarları",
+      "history": "Mesaj Geçmişi"
+    },
+    "finance": {
+      "title": "Finansal Yönetim",
+      "income": "Bu Ay Gelir",
+      "pending": "Bekleyen Tahsilat",
+      "expenses": "Giderler",
+      "netProfit": "Net Kar"
+    },
+    "tools": {
+      "categories": {
+        "calculation": "محاسبه",
+        "labor": "قانون کار",
+        "ai": "هوش مصنوعی",
+        "document": "سند"
+      },
+      "title": "پورتال ابزارهای حقوقی",
+      "subtitle": "از یک نقطه به تمام ابزارهای محاسبه و مدیریت دسترسی داشته باشید.",
+      "searchPlaceholder": "جستجوی وسیله نقلیه ..."
+    }
+  },
+  "auth": {
+    "success": "ورود با موفقیت انجام شد! در حال انتقال به داشبورد.",
+    "error": "ورود ناموفق بود. لطفاً اطلاعات خود را بررسی کنید."
+  },
+  "whatsapp": {
+    "title": "WhatsApp Hukuki Asistan",
+    "badge": "YENİ",
+    "desc": "MK Hukuk yapay zeka destekli hukuk asistanınız artık WhatsApp üzerinden cebinizde. Aşağıdaki hizmetlerden dilediğinizi seçerek hemen kullanmaya başlayabilirsiniz.",
+    "option1Title": "Hukuki Destek Alma",
+    "option1Desc": "Hukuki sorularınız için anında uzman desteği alın",
+    "option2Title": "Yargıtay ve BAM Kararı Arama",
+    "option2Desc": "Emsal kararlar ve içtihatlar için arama yapın",
+    "option3Title": "Dava Dilekçesi Hazırlama",
+    "option3Desc": "Yapay zeka ile hızlı ve profesyonel dilekçeler oluşturun",
+    "option4Title": "Sözleşme Hazırlama",
+    "option4Desc": "Özelleştirilmiş sözleşme şablonları oluşturun",
+    "btnStart": "WhatsApp'ta Başla"
+  },
+  "decisions": {
+    "badge": "İçtihat Veritabanı",
+    "title": "Yargıtay Kararları",
+    "desc": "Hukukun evrensel ilkeleri ve Yargıtay'ın güncel içtihatları ile güçlendirilen, Türkiye'nin en kapsamlı karar arama motoru.",
+    "searchPlaceholder": "Karar içeriği, daire, esas no veya anahtar kelime ile arayın...",
+    "btnSearch": "Ara",
+    "filterTitle": "Filtrele",
+    "filterChambers": "Daireler",
+    "filterYear": "Yıl",
+    "filterClear": "Filtreleri Temizle",
+    "ctaTitle": "Detaylı Analiz mi Lazım?",
+    "ctaDesc": "AI asistanımız ile kararları saniyeler içinde analiz edin ve özetleyin.",
+    "ctaBtn": "AI Asistanı Aç",
+    "listHeading": "Karar Listeleniyor",
+    "sortBy": "Sıralama: Yeni Gelenler",
+    "viewContent": "Karar Metnini Görüntüle",
+    "downloadPdf": "PDF İndir",
+    "noResults": "Sonuç Bulunamadı",
+    "noResultsDesc": "Aradığınız kriterlere uygun Yargıtay kararı bulunamadı. Lütfen farklı anahtar kelimeler deneyin.",
+    "stats": {
+      "total": "Toplam Karar",
+      "weekly": "Haftalık Güncelleme",
+      "speed": "Arama Hızı",
+      "accuracy": "Doğruluk Oranı"
+    }
+  },
+  "services_page": {
+    "title": "Uzmanlık Alanlarımız",
+    "desc": "MK Hukuk olarak, global standartlarda ve yerel tecrübeyle geniş bir yelpazede hukuki danışmanlık hizmeti sunmaktayız.",
+    "ctaTitle": "Hukuki Yardıma mı İhtiyacınız Var?",
+    "ctaDesc": "Uzman kadromuzla, ticari ve şahsi tüm hukuki süreçlerinizde inovatif çözümler üretiyoruz.",
+    "ctaBtnConsult": "Bir Avukata Danışın",
+    "ctaBtnContact": "Bize Ulaşın",
+    "badge": "زمینه های فعالیت",
+    "title1": "تخصص",
+    "title2": "مناطق ما",
+    "stat1": "زمینه فعالیت",
+    "stat2": "پرونده موفق",
+    "stat3": "سالها تجربه",
+    "allAreas": "همه مناطق",
+    "featuredAreas": "حوزه های تخصصی ویژه",
+    "allAreasSub": "تمامی زمینه های فعالیت",
+    "detailBtn": "بررسی کنید",
+    "whyUsTitle": "از کجا",
+    "whyUsTitleSpan": "قانون MK",
+    "whyUsDesc": "ما فرآیندهای قانونی شما را با کارکنان مجرب، رویکرد فن‌آوری‌محور و رویکرد خدمات رضایت‌محور مشتری به‌طور ایمن مدیریت می‌کنیم.",
+    "whyUsPoint1": "20+ سال کادر وکیل مجرب و متخصص در همه زمینه ها",
+    "whyUsPoint2": "تجزیه و تحلیل قانونی و ارزیابی اولیه مبتنی بر هوش مصنوعی",
+    "whyUsPoint3": "نظارت شفاف بر فرآیند و اطلاعات منظم",
+    "whyUsPoint4": "استراتژی نتیجه گرا و واکنش سریع",
+    "whyUsPoint5": "شبکه حقوقی ملی و بین المللی",
+    "freeConsultTitle": "پیش ارزیابی رایگان",
+    "freeConsultDesc": "برای دریافت ارزیابی اولیه رایگان از روند قانونی خود با ما تماس بگیرید.",
+    "aiStartBtn": "با دستیار هوش مصنوعی شروع کنید"
+  },
+  "services_list": {
+    "banking": {
+      "title": "Bankacılık ve Finans",
+      "desc": "Kredi sözleşmeleri, proje finansmanı ve bankacılık mevzuatı uyum süreçleri."
+    },
+    "mergers": {
+      "title": "Birleşme ve Devralmalar",
+      "desc": "Şirket birleşmeleri, hisse devirleri ve due diligence süreçlerinin yönetimi."
+    },
+    "energy": {
+      "title": "Enerji & Altyapı",
+      "desc": "Enerji projeleri, lisanslama süreçleri ve altyapı yatırımları hukuki desteği."
+    },
+    "esg": {
+      "title": "ESG (Çevresel, Sosyal ve Yönetişim)",
+      "desc": "Sürdürülebilirlik raporlaması ve ESG kriterlerine uyum danışmanlığı."
+    },
+    "ip": {
+      "title": "Fikri Mülkiyet ve Teknoloji",
+      "desc": "Marka, patent, telif hakları ve teknoloji transferi sözleşmeleri."
+    },
+    "fintech": {
+      "title": "Fintek",
+      "desc": "Ödeme sistemleri, dijital bankacılık ve finansal teknoloji regülasyonları."
+    },
+    "realestate": {
+      "title": "Gayrimenkul Hukuku",
+      "desc": "Taşınmaz alım-satımı, tapu incelemeleri ve inşaat hukuku uzmanlığı."
+    },
+    "labor": {
+      "title": "İş Hukuku",
+      "desc": "Bireysel ve toplu iş hukuku, sözleşme yönetimi ve uyuşmazlık çözümü."
+    },
+    "equity": {
+      "title": "Özel Sermaye Fonları",
+      "desc": "Fon kurulumu, yatırım yönetimi ve çıkış stratejileri danışmanlığı."
+    },
+    "competition": {
+      "title": "Rekabet Hukuku",
+      "desc": "Rekabet kurumu bildirimleri, muafiyet başvuruları ve rekabet ihlalleri."
+    },
+    "health": {
+      "title": "Sağlık Hukuku",
+      "desc": "İlaç ve tıbbi cihaz mevzuatı, malpraktis davaları ve sağlık regülasyonları."
+    },
+    "capital": {
+      "title": "Sermaye Piyasası Hukuku",
+      "desc": "Halka arz, ihraç süreçleri ve SPK mevzuatına uyum danışmanlığı."
+    },
+    "corporate": {
+      "title": "Şirketler Hukuku",
+      "desc": "Genel kurul süreçleri, yönetim kurulu sorumlulukları ve kurumsal yapılandırma."
+    },
+    "compliance": {
+      "title": "Uyum ve Etik",
+      "desc": "Yolsuzlukla mücadele, iç soruşturmalar ve etik kurallara uyum süreçleri."
+    },
+    "intltrade": {
+      "title": "Uluslararası Ticaret",
+      "desc": "Gümrük mevzuatı, ithalat-ihracat rejimleri ve uluslararası sözleşmeler."
+    },
+    "dispute": {
+      "title": "Uyuşmazlık Çözümü",
+      "desc": "Dava takibi, tahkim süreçleri ve alternatif uyuşmazlık çözüm yöntemleri."
+    },
+    "tax": {
+      "title": "Vergi",
+      "desc": "Vergi planlaması, vergi davaları ve uluslararası vergilendirme stratejileri."
+    },
+    "kvkk": {
+      "title": "Kişisel Verilerin Korunması",
+      "desc": "KVKK uyum süreçleri, veri işleme politikaları ve denetim prosedürleri."
+    },
+    "wealth": {
+      "title": "Varlık ve Servet Yönetimi",
+      "desc": "Aile şirketleri anayasası, miras planlaması ve varlık yapılandırma."
+    },
+    "whitecollar": {
+      "title": "Beyaz Yaka Suçları",
+      "desc": "Yolsuzlukla mücadele, iç denetimler ve ekonomik ceza hukuku süreçleri."
+    },
+    "family": {
+      "title": "Aile ve Boşanma Hukuku",
+      "desc": "Anlaşmalı ve çekişmeli boşanma, velayet, nafaka ve mal paylaşımı davaları."
+    },
+    "criminal": {
+      "title": "Ceza Hukuku",
+      "desc": "Ağır ceza davaları, soruşturma takibi ve profesyonel savunma hizmetleri."
+    },
+    "inheritance": {
+      "title": "Miras Hukuku",
+      "desc": "Vasiyetname hazırlama, miras paylaşımı, tenkis ve reddi miras davaları."
+    },
+    "execution": {
+      "title": "İcra ve İflas Hukuku",
+      "desc": "Alacak tahsili, icra takipleri, ihtiyati haciz ve iflas erteleme süreçleri."
+    },
+    "maritime": {
+      "title": "تجارت دریایی",
+      "desc": "خرید و فروش کشتی، قراردادهای حمل و نقل و قانون حوادث دریایی."
+    },
+    "it": {
+      "title": "فناوری اطلاعات و نرم افزار",
+      "desc": "تخصص در تجارت الکترونیک، جرایم سایبری و قراردادهای مجوز نرم افزار."
+    },
+    "insurance": {
+      "title": "قانون بیمه",
+      "desc": "دعاوی غرامت، پرونده های رجوع و اختلافات بیمه نامه."
+    },
+    "aviation": {
+      "title": "حقوق و هوانوردی",
+      "desc": "مشاوره قراردادهای حمل و نقل هوایی و مقررات هوانوردی."
+    }
+  },
+  "about": {
+    "badge": "Hakkımızda",
+    "title1": "از سال ۲۰۱۰",
+    "title2": "Hukukta Öncü",
+    "desc": "MK Hukuk, kuruluşundan bu yana Türkiye'nin ve dünyanın önde gelen yerli ve yabancı şirketlerine, finans kuruluşlarına ve bireysel müvekkillerine kapsamlı hukuki danışmanlık hizmeti sunmaktadır.",
+    "stats": {
+      "exp": "۱۵+",
+      "expLabel": "سال تجربه",
+      "lawyers": "۵",
+      "lawyersLabel": "وکیل متخصص"
+    },
+    "valuesTitle": "Değerlerimiz",
+    "values": {
+      "v1": {
+        "title": "Dürüstlük & Şeffaflık",
+        "desc": "Müvekkillerimizle kurduğumuz her ilişkide dürüstlük ve mutlak şeffaflık ilkesini benimsiyoruz."
+      },
+      "v2": {
+        "title": "Mükemmeliyetçilik",
+        "desc": "En karmaşık hukuki sorunlara, en yüksek profesyonel standartlarda inovatif çözümler üretiyoruz."
+      },
+      "v3": {
+        "title": "Çeşitlilik",
+        "desc": "Farklı bakış açılarının ve kapsayıcı bir çalışma ortamının başarımızın anahtarı olduğuna inanıyoruz."
+      },
+      "v4": {
+        "title": "Müvekkil Odaklılık",
+        "desc": "Faliyetlerimizin odağında her zaman müvekkillerimizin stratejik hedefleri ve güvenliği yer alır."
+      }
+    },
+    "missionTitle": "Küresel Vizyon, Yerel Güç",
+    "missionDesc": "\"Vizyonumuz; müvekkillerimizin ihtiyaçlarını gelişen dünya standartlarına uyumlu hale getirerek, Türkiye'nin her hukuki ihtiyaca en yüksek seviyede cevap verebilen lider hukuk bürosu kavramını sürdürmektir.\"",
+    "journey": {
+      "title": "سفر ما",
+      "m1": "دفتر حقوقی MK تاسیس شد",
+      "m2": "گسترش در زمینه املاک و حقوق تجارت",
+      "m3": "راه اندازی پلت فرم مشاوره حقوقی دیجیتال",
+      "m4": "ادغام دستیار حقوقی مبتنی بر هوش مصنوعی",
+      "m5": "رهبری صنعت با بیش از 500 مورد موفق"
+    },
+    "mission": {
+      "item1": "استفاده از قدرت تکنولوژی و قانون در کنار هم",
+      "item2": "حفظ رضایت مشتری در بالاترین سطح",
+      "item3": "ارائه یک روند قانونی شفاف و عادلانه"
+    },
+    "workWithUs": {
+      "title": "با ما کار کنید",
+      "desc": "ما با تیم مجرب خود در مراحل قانونی شما همراه شما هستیم.",
+      "contactBtn": "تماس با ما",
+      "servicesBtn": "خدمات ما"
+    }
+  },
+  "faq": {
+    "badge": "Bilgi Destek",
+    "title": "Sıkça Sorulan Sorular",
+    "desc": "Hukuki süreçlerinizle ilgili en çok merak edilen soruları ve şeffaf çalışma prensiplerimizi burada bulabilirsiniz.",
+    "questions": {
+      "q1": {
+        "q": "Hangi hukuk alanlarında uzmanlaşmış hizmet sunuyorsunuz?",
+        "a": "MK Hukuk olarak geniş bir yelpazede hizmet veriyoruz. Başta kurumsal şirketler hukuku, gayrimenkul hukuku, aile ve boşanma davaları, ceza hukuku, miras paylaşımları ve teknoloji hukuku (KVKK, Fintek) olmak üzere 26 farklı uzmanlık alanında hizmet sunmaktayız."
+      },
+      "q2": {
+        "q": "İlk görüşme nasıl gerçekleşiyor ve ücretli mi?",
+        "a": "Telefon, WhatsApp veya web sitemiz üzerinden randevu aldıktan sonra İstanbul'daki ofisimizde veya online platformlar üzerinden görüntülü görüşme yapıyoruz. Müvekkil adaylarımıza süreçle ilgili genel bilgilendirme yaptığımız ön görüşmelerimiz ücretsizdir."
+      },
+      "q3": {
+        "q": "Avukatlık danışmanlık ücretleri nasıl belirleniyor?",
+        "a": "Ücretlendirme politikamız şeffaftır. Danışmanlık ücretleri davanın türüne, karmaşıklığına ve harcanacak emeğe göre değişmektedir. Türkiye Barolar Birliği ve İstanbul Barosu asgari ücret tarifelerini baz alarak, hizmet sunmadan önce tüm maliyetleri netleştiriyoruz."
+      },
+      "q4": {
+        "q": "Davamın sonuçlanması ne kadar sürer?",
+        "a": "Dava süreleri mahkemenin iş yüküne ve dosyanın niteliğine göre değişir. Yerel mahkeme süreçleri ortalama 8-18 ay arasında sürmektedir. Her duruşma sonrası müvekkillerimizi yazılı raporlarla bilgilendiriyor ve sürecin en hızlı şekilde neticelenmesi için usuli işlemleri titizlikle takip ediyoruz."
+      },
+      "q5": {
+        "q": "Şirketler için sürekli danışmanlık (müşavirlik) hizmetiniz var mı?",
+        "a": "Evet, yerli ve yabancı pek çok şirkete aylık bazda sürekli hukuk müşavirliği hizmeti sunuyoruz. Bu kapsamda sözleşme yönetimi, iş hukuku uyumu, KVKK denetimleri ve genel kurumsal yönetim süreçlerini kapsayan 'boutique' çözümler sağlıyoruz."
+      },
+      "q6": {
+        "q": "Adli yardımdan (ücretsiz avukat) faydalanabilir miyim?",
+        "a": "Ekonomik durumu avukatlık ücretini ödemeye imkan vermeyen kişiler, bulundukları ilin Baro Başkanlığına (Adli Yardım Bürosu) başvurarak ücretsiz avukat tayin edilmesini talep edebilirler. Bu konuda başvuruculara rehberlik hizmeti sunuyoruz."
+      }
+    },
+    "cta1": {
+      "title": "Hemen Arayın",
+      "desc": "Acil hukuki yardıma mı ihtiyacınız var? 7/24 bizlere ulaşabilirsiniz."
+    },
+    "cta2": {
+      "title": "WhatsApp Destek",
+      "desc": "Dosyanızla ilgili hızlı bilgi almak için mesaj gönderebilirsiniz.",
+      "btn": "Mesaj Gönder"
+    }
+  },
+  "footer": {
+    "desc": "Türkiye'nin lider dijital hukuk platformu. Uzman kadromuz ve yapay zeka desteğimizle hukuki süreçlerinizi yönetiyoruz.",
+    "quickAccess": "Hızlı Erişim",
+    "corporate": "Kurumsal",
+    "legal": "Yasal",
+    "newsletter": "Bülten",
+    "newsletterDesc": "Hukuk dünyasındaki gelişmeleri takip edin.",
+    "emailPlaceholder": "E-posta adresiniz",
+    "subscribe": "Abone Ol",
+    "rights": "MK Hukuk Danışmanlık. Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "kvkk": "KVKK Aydınlatma",
+    "cookies": "Çerez Politikası"
+  },
+  "chat": {
+    "title": "MK Hukuk AI Asistan",
+    "online": "Çevrimiçi",
+    "welcome": "Merhaba! Ben MK Hukuk AI. Hukuki süreçlerinizde size rehberlik edebilirim. Nasıl yardımcı olabilirim?",
+    "welcomeExample2": "Boşanma davası ne kadar sürer? Tazminat haklarım nelerdir?",
+    "placeholder": "Sorunuzu buraya yazın...",
+    "typing": "می گوید..."
+  },
+  "guide": {
+    "badge": "راهنمای حقوقی",
+    "title": "مرکز اطلاعات و راهنماها",
+    "searchPlaceholder": "جستجو برای موضوع یا کلمه کلیدی...",
+    "back": "به عقب برگرد",
+    "faq": "سوالات متداول",
+    "expertTips": "مشاوره تخصصی",
+    "cities": "تبلیغات شهری (آرشیو)"
+  },
+  "ai": {
+    "badge": "دستیار حقوقی با پشتیبانی از هوش مصنوعی",
+    "title": "قانون MK",
+    "titleHighlight": "دستیار هوش مصنوعی",
+    "desc": "سوالات خود را بنویسید یا اسناد خود را آپلود کنید. بیایید به دنبال تحلیل حقوقی و تصمیمات سابقه باشیم.",
+    "quickTopics": "شروع سریع",
+    "topic1": "طلاق",
+    "topic2": "مطالبات کارگران",
+    "topic3": "اختلافات اجاره",
+    "topic4": "اشتراک ارث",
+    "topic5": "محاسبه غرامت",
+    "topic6": "تجزیه و تحلیل قرارداد",
+    "welcome": "سلام! چگونه می توانم به شما کمک کنم؟",
+    "welcomeExample1": "چگونه حقوق خود را محاسبه کنم؟",
+    "welcomeExample2": "آیا می توانید یک تصمیم قبلی پیدا کنید؟",
+    "placeholder": "سوال خود را اینجا تایپ کنید یا یک سند را بکشید...",
+    "disclaimer": "توجه: دستیار هوش مصنوعی فقط برای اهداف اطلاعاتی است. این جایگزینی برای مشاوره حقوقی نیست."
+  },
+  "contact": {
+    "title": "ارتباط",
+    "desc": "ما اینجا هستیم تا بهترین پشتیبانی را در فرآیندهای قانونی شما ارائه دهیم. می توانید از طریق فرم یا راه های ارتباطی زیر با ما در تماس باشید.",
+    "heroTitle1": "تماس با ما",
+    "heroTitle2": "عبور کند",
+    "phoneLabel": "تلفن",
+    "phoneDesc": "شما می توانید برای قرار ملاقات و جلسه اولیه از ساعت 09:00 الی 18:00 در روزهای کاری تماس بگیرید.",
+    "emailLabel": "ایمیل",
+    "emailDesc": "برای ارسال فایل و سوالات دقیق با ما بنویسید. حداکثر ظرف 24 ساعت با شما تماس خواهیم گرفت.",
+    "whatsappLabel": "پشتیبانی واتس اپ",
+    "whatsappDesc": "خط واتس اپ ما برای پشتیبانی فوری حقوقی یا ارسال سریع اسناد فعال است.",
+    "whatsappBtn": "به WhatsApp بروید"
+  }
+}

@@ -1,0 +1,503 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Leistungen",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "aiAssistant": "KI-Assistent",
+    "database": "Urteilsdatenbank",
+    "tools": "Rechtstools",
+    "glossary": "Glossar",
+    "login": "Login",
+    "contact": "Kommunikation"
+  },
+  "brand": {
+    "name": "MK RECHT",
+    "subtitle": "Beratung & Technologie"
+  },
+  "home": {
+    "badge": "Türkeis umfassendste digitale Rechtsplattform",
+    "heroTitle1": "Digitale",
+    "heroTitle2": "Transformation im Recht",
+    "heroDesc": "Wir beschleunigen Ihre rechtlichen Prozesse mit KI-Unterstützung, über 2 Millionen Gerichtsurteilen und Expertenberatung.",
+    "ctaAi": "KI-ASSISTENT STARTEN",
+    "ctaServices": "UNSERE LEISTUNGEN",
+    "aiBadge": "KI-GESTÜTZTES RECHT",
+    "aiTitle1": "Geleceğin Hukuk",
+    "aiTitle2": "Deneyimi Burada",
+    "aiDesc": "Mit der von MK Recht entwickelten hochmodernen KI,",
+    "aiDescBold": " Rechtsanalyse in Sekunden ",
+    "aiDescEnd": "und sofortiger Zugriff auf Präzedenzfälle.",
+    "aiFeature1": "24/7 Aktive Rechtsberatung",
+    "aiFeature2": "2M+ Analise von Gerichtsurteilen",
+    "aiFeature3": "Entwurf von Anträgen und Verträgen",
+    "aiFeature4": "Zusammenfassung komplexer Vorschriften",
+    "startChat": "Chat Starten",
+    "servicesBadge": "UNSERE EXPERTISE",
+    "servicesTitle": "Umfassende rechtliche Lösungen",
+    "service1Title": "Familie und Scheidung",
+    "service1Desc": "Einfühlsame und professionelle Unterstützung bei Scheidung, Sorgerecht und Güterteilung.",
+    "service2Title": "Arbeit und Soziale Sicherheit",
+    "service2Desc": "Expertenlösungen für Entschädigung, Wiedereinstellung und Arbeitskonflikte.",
+    "service3Title": "Immobilien und Bauen",
+    "service3Desc": "Alle Rechtsberatungsprozesse im Zusammenhang mit Urkunden, Vermietung und Bau.",
+    "service4Title": "Strafrecht",
+    "service4Desc": "Professionelle Verteidigungsdienste in hohen Straf- und Ermittlungsphasen.",
+    "details": "Details Anzeigen",
+    "stats": {
+      "decisions": "15+ Jahre Erfahrung",
+      "users": "2500+ Abgeschlossene Fälle",
+      "lawyers": "5 Fachanwälte",
+      "success": "15+ Fachgebiete"
+    },
+    "contact": {
+      "badge": "Rechtsberatung",
+      "title1": "Kontaktieren Sie uns,",
+      "title2": "Lassen Sie uns Ihren Prozess gemeinsam verwalten.",
+      "desc": "Füllen Sie das Formular für Ihre rechtlichen Fragen oder für eine vorläufige Beurteilung Ihres Falles aus. Unsere kompetenten Anwälte werden sich so schnell wie möglich bei Ihnen melden.",
+      "phoneLabel": "Telefon",
+      "emailLabel": "E-Mail",
+      "formTitle": "Nachricht senden",
+      "formDesc": "Sie können mit uns Kontakt aufnehmen, indem Sie alle Felder vollständig ausfüllen.",
+      "successTitle": "Ihre Nachricht erhalten!",
+      "successDesc": "Wir werden uns so schnell wie möglich über unsere Kommunikationskanäle bei Ihnen melden.",
+      "errorTitle": "Es ist ein Fehler aufgetreten",
+      "errorDesc": "Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später noch einmal.",
+      "namePlaceholder": "Ihr Vor- und Nachname *",
+      "phonePlaceholder": "Ihre Telefonnummer",
+      "emailPlaceholder": "Ihre E-Mail-Adresse *",
+      "subjectPlaceholder": "Thema",
+      "messagePlaceholder": "Ihre Nachricht *",
+      "submittingBtn": "Senden...",
+      "submitBtn": "Formular abschicken",
+      "kvkkNote": "Durch Klicken auf die Schaltfläche „Senden“ bestätigen Sie, dass Sie den KVKK-Informationstext gelesen und akzeptiert haben."
+    },
+    "service5Title": "Information und Technologie",
+    "service5Desc": "Fachwissen in den Bereichen Cyberkriminalität, E-Commerce und Schutz digitaler Vermögenswerte.",
+    "service6Title": "Vollstreckung und Insolvenz",
+    "service6Desc": "Management von Prozessen zur Einziehung, Beschlagnahme und Umschuldung von Forderungen.",
+    "service7Title": "Verbraucherrecht",
+    "service7Desc": "Umfassende Unterstützung bei mangelhaften Waren-, Dienstleistungs- und Verbraucherschlichtungsverfahren.",
+    "service8Title": "Vertragsmanagement",
+    "service8Desc": "Vorbereitung, Prüfung und Überarbeitung von Handels- und Einzelverträgen."
+  },
+  "whatsapp": {
+    "title": "WhatsApp Rechtsassistent",
+    "badge": "NEU",
+    "desc": "Der KI-gestützte Rechtsassistent von MK Recht ist jetzt über WhatsApp in Ihrer Tasche.",
+    "btnStart": "Auf WhatsApp starten",
+    "option1Title": "Hukuki Destek Alma",
+    "option1Desc": "Hukuki sorularınız için anında uzman desteği alın",
+    "option2Title": "Yargıtay ve BAM Kararı Arama",
+    "option2Desc": "Emsal kararlar ve içtihatlar için arama yapın",
+    "option3Title": "Dava Dilekçesi Hazırlama",
+    "option3Desc": "Yapay zeka ile hızlı ve profesyonel dilekçeler oluşturun",
+    "option4Title": "Sözleşme Hazırlama",
+    "option4Desc": "Özelleştirilmiş sözleşme şablonları oluşturun"
+  },
+  "services_page": {
+    "title": "Unsere Fachgebiete",
+    "desc": "Als MK Recht bieten wir ein breites Spektrum an Rechtsberatung auf globalem Niveau.",
+    "ctaBtnContact": "Kontaktieren Sie uns",
+    "ctaTitle": "Hukuki Yardıma mı İhtiyacınız Var?",
+    "ctaDesc": "Uzman kadromuzla, ticari ve şahsi tüm hukuki süreçlerinizde inovatif çözümler üretiyoruz.",
+    "ctaBtnConsult": "Bir Avukata Danışın",
+    "badge": "Tätigkeitsfelder",
+    "title1": "Sachverstand",
+    "title2": "Unsere Bereiche",
+    "stat1": "Tätigkeitsbereich",
+    "stat2": "Erfolgreicher Fall",
+    "stat3": "Jahrelange Erfahrung",
+    "allAreas": "Alle Bereiche",
+    "featuredAreas": "Ausgewählte Fachgebiete",
+    "allAreasSub": "Alle Tätigkeitsfelder",
+    "detailBtn": "Rezension",
+    "whyUsTitle": "Wovon",
+    "whyUsTitleSpan": "MK-Gesetz",
+    "whyUsDesc": "Wir verwalten Ihre Rechtsprozesse sicher mit unserem erfahrenen Personal, unserem technologieorientierten Ansatz und unserem auf Kundenzufriedenheit ausgerichteten Serviceansatz.",
+    "whyUsPoint1": "Mehr als 20 Jahre erfahrenes Anwaltspersonal, spezialisiert auf alle Bereiche",
+    "whyUsPoint2": "KI-gestützte rechtliche Analyse und vorläufige Bewertung",
+    "whyUsPoint3": "Transparente Prozessüberwachung und regelmäßige Information",
+    "whyUsPoint4": "Ergebnisorientierte Strategie und schnelle Reaktion",
+    "whyUsPoint5": "Nationales und internationales juristisches Netzwerk",
+    "freeConsultTitle": "Kostenlose Vorabbewertung",
+    "freeConsultDesc": "Kontaktieren Sie uns, um eine kostenlose vorläufige Bewertung Ihres Rechtsverfahrens zu erhalten.",
+    "aiStartBtn": "Beginnen Sie mit AI Assistant"
+  },
+  "about": {
+    "badge": "Über uns",
+    "title1": "Seit 2010",
+    "title2": "Führend im Recht",
+    "desc": "MK Recht bietet umfassende Rechtsberatung für führende Unternehmen und Privatpersonen weltweit.",
+    "stats": {
+      "exp": "15+",
+      "expLabel": "Jahre Erfahrung",
+      "lawyers": "5",
+      "lawyersLabel": "Fachanwälte"
+    },
+    "valuesTitle": "Değerlerimiz",
+    "values": {
+      "v1": {
+        "title": "Dürüstlük & Şeffaflık",
+        "desc": "Müvekkillerimizle kurduğumuz her ilişkide dürüstlük ve mutlak şeffaflık ilkesini benimsiyoruz."
+      },
+      "v2": {
+        "title": "Mükemmeliyetçilik",
+        "desc": "En karmaşık hukuki sorunlara, en yüksek profesyonel standartlarda inovatif çözümler üretiyoruz."
+      },
+      "v3": {
+        "title": "Çeşitlilik",
+        "desc": "Farklı bakış açılarının ve kapsayıcı bir çalışma ortamının başarımızın anahtarı olduğuna inanıyoruz."
+      },
+      "v4": {
+        "title": "Müvekkil Odaklılık",
+        "desc": "Faliyetlerimizin odağında her zaman müvekkillerimizin stratejik hedefleri ve güvenliği yer alır."
+      }
+    },
+    "missionTitle": "Küresel Vizyon, Yerel Güç",
+    "missionDesc": "\"Vizyonumuz; müvekkillerimizin ihtiyaçlarını gelişen dünya standartlarına uyumlu hale getirerek, Türkiye'nin her hukuki ihtiyaca en yüksek seviyede cevap verebilen lider hukuk bürosu kavramını sürdürmektir.\"",
+    "journey": {
+      "title": "Unsere Reise",
+      "m1": "Die Anwaltskanzlei MK wurde gegründet",
+      "m2": "Expansion in den Bereichen Immobilien- und Wirtschaftsrecht",
+      "m3": "Start der digitalen Rechtsberatungsplattform",
+      "m4": "KI-gestützte Integration von Rechtsassistenten",
+      "m5": "Branchenführerschaft mit über 500 erfolgreichen Fällen"
+    },
+    "mission": {
+      "item1": "Die Kraft von Technologie und Recht gemeinsam nutzen",
+      "item2": "Kundenzufriedenheit auf höchstem Niveau halten",
+      "item3": "Bereitstellung eines transparenten und fairen Rechtsverfahrens"
+    },
+    "workWithUs": {
+      "title": "Arbeiten Sie mit uns",
+      "desc": "Wir begleiten Sie in Ihren rechtlichen Prozessen mit unserem erfahrenen Team.",
+      "contactBtn": "Kontaktieren Sie uns",
+      "servicesBtn": "Unsere Leistungen"
+    }
+  },
+  "faq": {
+    "badge": "Support",
+    "title": "Häufig gestellte Fragen",
+    "desc": "Finden Sie Antworten auf die am häufigsten gestellten Fragen zu rechtlichen Prozessen.",
+    "questions": {
+      "q1": {
+        "q": "Hangi hukuk alanlarında uzmanlaşmış hizmet sunuyorsunuz?",
+        "a": "MK Hukuk olarak geniş bir yelpazede hizmet veriyoruz. Başta kurumsal şirketler hukuku, gayrimenkul hukuku, aile ve boşanma davaları, ceza hukuku, miras paylaşımları ve teknoloji hukuku (KVKK, Fintek) olmak üzere 26 farklı uzmanlık alanında hizmet sunmaktayız."
+      },
+      "q2": {
+        "q": "İlk görüşme nasıl gerçekleşiyor ve ücretli mi?",
+        "a": "Telefon, WhatsApp veya web sitemiz üzerinden randevu aldıktan sonra İstanbul'daki ofisimizde veya online platformlar üzerinden görüntülü görüşme yapıyoruz. Müvekkil adaylarımıza süreçle ilgili genel bilgilendirme yaptığımız ön görüşmelerimiz ücretsizdir."
+      },
+      "q3": {
+        "q": "Avukatlık danışmanlık ücretleri nasıl belirleniyor?",
+        "a": "Ücretlendirme politikamız şeffaftır. Danışmanlık ücretleri davanın türüne, karmaşıklığına ve harcanacak emeğe göre değişmektedir. Türkiye Barolar Birliği ve İstanbul Barosu asgari ücret tarifelerini baz alarak, hizmet sunmadan önce tüm maliyetleri netleştiriyoruz."
+      },
+      "q4": {
+        "q": "Davamın sonuçlanması ne kadar sürer?",
+        "a": "Dava süreleri mahkemenin iş yüküne ve dosyanın niteliğine göre değişir. Yerel mahkeme süreçleri ortalama 8-18 ay arasında sürmektedir. Her duruşma sonrası müvekkillerimizi yazılı raporlarla bilgilendiriyor ve sürecin en hızlı şekilde neticelenmesi için usuli işlemleri titizlikle takip ediyoruz."
+      },
+      "q5": {
+        "q": "Şirketler için sürekli danışmanlık (müşavirlik) hizmetiniz var mı?",
+        "a": "Evet, yerli ve yabancı pek çok şirkete aylık bazda sürekli hukuk müşavirliği hizmeti sunuyoruz. Bu kapsamda sözleşme yönetimi, iş hukuku uyumu, KVKK denetimleri ve genel kurumsal yönetim süreçlerini kapsayan 'boutique' çözümler sağlıyoruz."
+      },
+      "q6": {
+        "q": "Adli yardımdan (ücretsiz avukat) faydalanabilir miyim?",
+        "a": "Ekonomik durumu avukatlık ücretini ödemeye imkan vermeyen kişiler, bulundukları ilin Baro Başkanlığına (Adli Yardım Bürosu) başvurarak ücretsiz avukat tayin edilmesini talep edebilirler. Bu konuda başvuruculara rehberlik hizmeti sunuyoruz."
+      }
+    },
+    "cta1": {
+      "title": "Hemen Arayın",
+      "desc": "Acil hukuki yardıma mı ihtiyacınız var? 7/24 bizlere ulaşabilirsiniz."
+    },
+    "cta2": {
+      "title": "WhatsApp Destek",
+      "desc": "Dosyanızla ilgili hızlı bilgi almak için mesaj gönderebilirsiniz.",
+      "btn": "Mesaj Gönder"
+    }
+  },
+  "footer": {
+    "desc": "Türkeis führende Legal-Tech-Plattform.",
+    "rights": "MK Recht Beratung. Alle Rechte vorbehalten.",
+    "quickAccess": "Hızlı Erişim",
+    "corporate": "Kurumsal",
+    "legal": "Yasal",
+    "newsletter": "Bülten",
+    "newsletterDesc": "Hukuk dünyasındaki gelişmeleri takip edin.",
+    "emailPlaceholder": "E-posta adresiniz",
+    "subscribe": "Abone Ol",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "kvkk": "KVKK Aydınlatma",
+    "cookies": "Çerez Politikası"
+  },
+  "dashboard": {
+    "title": "Rechts-Dashboard",
+    "welcome": "Willkommen, Anwalt",
+    "stats": {
+      "activeCases": "Aktive Fälle",
+      "hearings": "Anstehende Termine",
+      "tasks": "Offene Aufgaben",
+      "clients": "Gesamtklienten",
+      "totalRevenue": "Gesamtsammlung",
+      "pendingReceivables": "Einzuziehende Forderungen",
+      "upcomingCriticalCases": "Kommender kritischer Fall",
+      "winRate": "Gewinnrate"
+    },
+    "tabs": {
+      "overview": "Übersicht",
+      "management": "Seitenverwaltung",
+      "chatbot": "Chatbot Yönetimi",
+      "cases": "Dava Yönetimi",
+      "clients": "Müvekkil Yönetimi",
+      "appointments": "Randevu Takvimi",
+      "documents": "Belge Yönetimi",
+      "website": "Web Sayfaları",
+      "blog": "Blog Yönetimi",
+      "seo": "SEO & Analitik",
+      "finance": "Finansal Yönetim",
+      "team": "Teammanagement"
+    },
+    "management": {
+      "title": "Content-Management",
+      "saveBtn": "Änderungen veröffentlichen",
+      "heroSection": "Hero Bölümü (Ana Sayfa)",
+      "servicesSection": "Hizmet Portföyü",
+      "heroTitle": "Ana Başlık",
+      "heroDesc": "Alt Başlık / Açıklama",
+      "preview": "Canlı Önizleme"
+    },
+    "recentActivities": "Son Aktiviteler",
+    "activities": {
+      "caseAdded": "Yeni bir dava dosyası eklendi",
+      "hearingReminder": "Yarınki duruşma için hatırlatma",
+      "documentUploaded": "Yeni bir dilekçe yüklendi",
+      "aiConsult": "AI Asistan ile dosya analizi yapıldı"
+    },
+    "quickActions": {
+      "title": "Hızlı İşlemler",
+      "newCase": "Yeni Dosya Aç",
+      "searchDecisions": "Karar Ara",
+      "aiAnalysis": "AI Analiz",
+      "appointments": "Randevular",
+      "newClient": "Neuen Kunden hinzufügen"
+    },
+    "chatbot": {
+      "title": "Chatbot Yönetimi",
+      "sessions": "Aktif Oturumlar",
+      "configuration": "Chatbot Ayarları",
+      "history": "Mesaj Geçmişi"
+    },
+    "finance": {
+      "title": "Finansal Yönetim",
+      "income": "Bu Ay Gelir",
+      "pending": "Bekleyen Tahsilat",
+      "expenses": "Giderler",
+      "netProfit": "Net Kar"
+    },
+    "tools": {
+      "categories": {
+        "calculation": "BERECHNUNG",
+        "labor": "ARBEITSRECHT",
+        "ai": "KÜNSTLICHE INTELLIGENZ",
+        "document": "DOKUMENTIEREN"
+      },
+      "title": "Legal Tools-Portal",
+      "subtitle": "Greifen Sie von einem einzigen Punkt aus auf alle Berechnungs- und Verwaltungstools zu.",
+      "searchPlaceholder": "Fahrzeug suchen..."
+    }
+  },
+  "auth": {
+    "success": "Anmeldung Erfolgreich! Weiterleitung zum Dashboard.",
+    "error": "Anmeldung Fehlgeschlagen. Bitte überprüfen Sie Ihre Daten."
+  },
+  "decisions": {
+    "badge": "İçtihat Veritabanı",
+    "title": "Yargıtay Kararları",
+    "desc": "Hukukun evrensel ilkeleri ve Yargıtay'ın güncel içtihatları ile güçlendirilen, Türkiye'nin en kapsamlı karar arama motoru.",
+    "searchPlaceholder": "Karar içeriği, daire, esas no veya anahtar kelime ile arayın...",
+    "btnSearch": "Ara",
+    "filterTitle": "Filtrele",
+    "filterChambers": "Daireler",
+    "filterYear": "Yıl",
+    "filterClear": "Filtreleri Temizle",
+    "ctaTitle": "Detaylı Analiz mi Lazım?",
+    "ctaDesc": "AI asistanımız ile kararları saniyeler içinde analiz edin ve özetleyin.",
+    "ctaBtn": "AI Asistanı Aç",
+    "listHeading": "Karar Listeleniyor",
+    "sortBy": "Sıralama: Yeni Gelenler",
+    "viewContent": "Karar Metnini Görüntüle",
+    "downloadPdf": "PDF İndir",
+    "noResults": "Sonuç Bulunamadı",
+    "noResultsDesc": "Aradığınız kriterlere uygun Yargıtay kararı bulunamadı. Lütfen farklı anahtar kelimeler deneyin.",
+    "stats": {
+      "total": "Toplam Karar",
+      "weekly": "Haftalık Güncelleme",
+      "speed": "Arama Hızı",
+      "accuracy": "Doğruluk Oranı"
+    }
+  },
+  "services_list": {
+    "banking": {
+      "title": "Bankacılık ve Finans",
+      "desc": "Kredi sözleşmeleri, proje finansmanı ve bankacılık mevzuatı uyum süreçleri."
+    },
+    "mergers": {
+      "title": "Birleşme ve Devralmalar",
+      "desc": "Şirket birleşmeleri, hisse devirleri ve due diligence süreçlerinin yönetimi."
+    },
+    "energy": {
+      "title": "Enerji & Altyapı",
+      "desc": "Enerji projeleri, lisanslama süreçleri ve altyapı yatırımları hukuki desteği."
+    },
+    "esg": {
+      "title": "ESG (Çevresel, Sosyal ve Yönetişim)",
+      "desc": "Sürdürülebilirlik raporlaması ve ESG kriterlerine uyum danışmanlığı."
+    },
+    "ip": {
+      "title": "Fikri Mülkiyet ve Teknoloji",
+      "desc": "Marka, patent, telif hakları ve teknoloji transferi sözleşmeleri."
+    },
+    "fintech": {
+      "title": "Fintek",
+      "desc": "Ödeme sistemleri, dijital bankacılık ve finansal teknoloji regülasyonları."
+    },
+    "realestate": {
+      "title": "Gayrimenkul Hukuku",
+      "desc": "Taşınmaz alım-satımı, tapu incelemeleri ve inşaat hukuku uzmanlığı."
+    },
+    "labor": {
+      "title": "İş Hukuku",
+      "desc": "Bireysel ve toplu iş hukuku, sözleşme yönetimi ve uyuşmazlık çözümü."
+    },
+    "equity": {
+      "title": "Özel Sermaye Fonları",
+      "desc": "Fon kurulumu, yatırım yönetimi ve çıkış stratejileri danışmanlığı."
+    },
+    "competition": {
+      "title": "Rekabet Hukuku",
+      "desc": "Rekabet kurumu bildirimleri, muafiyet başvuruları ve rekabet ihlalleri."
+    },
+    "health": {
+      "title": "Sağlık Hukuku",
+      "desc": "İlaç ve tıbbi cihaz mevzuatı, malpraktis davaları ve sağlık regülasyonları."
+    },
+    "capital": {
+      "title": "Sermaye Piyasası Hukuku",
+      "desc": "Halka arz, ihraç süreçleri ve SPK mevzuatına uyum danışmanlığı."
+    },
+    "corporate": {
+      "title": "Şirketler Hukuku",
+      "desc": "Genel kurul süreçleri, yönetim kurulu sorumlulukları ve kurumsal yapılandırma."
+    },
+    "compliance": {
+      "title": "Uyum ve Etik",
+      "desc": "Yolsuzlukla mücadele, iç soruşturmalar ve etik kurallara uyum süreçleri."
+    },
+    "intltrade": {
+      "title": "Uluslararası Ticaret",
+      "desc": "Gümrük mevzuatı, ithalat-ihracat rejimleri ve uluslararası sözleşmeler."
+    },
+    "dispute": {
+      "title": "Uyuşmazlık Çözümü",
+      "desc": "Dava takibi, tahkim süreçleri ve alternatif uyuşmazlık çözüm yöntemleri."
+    },
+    "tax": {
+      "title": "Vergi",
+      "desc": "Vergi planlaması, vergi davaları ve uluslararası vergilendirme stratejileri."
+    },
+    "kvkk": {
+      "title": "Kişisel Verilerin Korunması",
+      "desc": "KVKK uyum süreçleri, veri işleme politikaları ve denetim prosedürleri."
+    },
+    "wealth": {
+      "title": "Varlık ve Servet Yönetimi",
+      "desc": "Aile şirketleri anayasası, miras planlaması ve varlık yapılandırma."
+    },
+    "whitecollar": {
+      "title": "Beyaz Yaka Suçları",
+      "desc": "Yolsuzlukla mücadele, iç denetimler ve ekonomik ceza hukuku süreçleri."
+    },
+    "family": {
+      "title": "Aile ve Boşanma Hukuku",
+      "desc": "Anlaşmalı ve çekişmeli boşanma, velayet, nafaka ve mal paylaşımı davaları."
+    },
+    "criminal": {
+      "title": "Ceza Hukuku",
+      "desc": "Ağır ceza davaları, soruşturma takibi ve profesyonel savunma hizmetleri."
+    },
+    "inheritance": {
+      "title": "Miras Hukuku",
+      "desc": "Vasiyetname hazırlama, miras paylaşımı, tenkis ve reddi miras davaları."
+    },
+    "execution": {
+      "title": "İcra ve İflas Hukuku",
+      "desc": "Alacak tahsili, icra takipleri, ihtiyati haciz ve iflas erteleme süreçleri."
+    },
+    "maritime": {
+      "title": "Seehandel",
+      "desc": "Schiffskauf und -verkauf, Frachtverträge und Seeunfallrecht."
+    },
+    "it": {
+      "title": "IT & Software",
+      "desc": "Fachwissen in den Bereichen E-Commerce, Cyberkriminalität und Softwarelizenzverträge."
+    },
+    "insurance": {
+      "title": "Versicherungsrecht",
+      "desc": "Schadensersatzansprüche, Regressfälle und Versicherungsstreitigkeiten."
+    },
+    "aviation": {
+      "title": "Recht und Luftfahrt",
+      "desc": "Beratung zu Lufttransportverträgen und Luftfahrtvorschriften."
+    }
+  },
+  "chat": {
+    "title": "MK Hukuk AI Asistan",
+    "online": "Çevrimiçi",
+    "welcome": "Merhaba! Ben MK Hukuk AI. Hukuki süreçlerinizde size rehberlik edebilirim. Nasıl yardımcı olabilirim?",
+    "welcomeExample2": "Boşanma davası ne kadar sürer? Tazminat haklarım nelerdir?",
+    "placeholder": "Sorunuzu buraya yazın...",
+    "typing": "Es heißt..."
+  },
+  "guide": {
+    "badge": "Rechtsratgeber",
+    "title": "Informationszentrum und Reiseführer",
+    "searchPlaceholder": "Nach Thema oder Stichwort suchen...",
+    "back": "Geh zurück",
+    "faq": "Häufig gestellte Fragen",
+    "expertTips": "Expertenrat",
+    "cities": "Stadtbezogene Werbung (Archiv)"
+  },
+  "ai": {
+    "badge": "Rechtsassistent mit Unterstützung künstlicher Intelligenz",
+    "title": "MK-Gesetz",
+    "titleHighlight": "KI-Assistent",
+    "desc": "Schreiben Sie Ihre Fragen oder laden Sie Ihre Dokumente hoch; Suchen wir nach rechtlichen Analysen und Präzedenzfallentscheidungen.",
+    "quickTopics": "Schnellstart",
+    "topic1": "Scheidung",
+    "topic2": "Arbeitnehmerforderungen",
+    "topic3": "Mietstreitigkeiten",
+    "topic4": "Erbschaftsteilung",
+    "topic5": "Vergütungsberechnung",
+    "topic6": "Vertragsanalyse",
+    "welcome": "Hallo! Wie kann ich dir helfen?",
+    "welcomeExample1": "Wie berechne ich mein Gehalt?",
+    "welcomeExample2": "Können Sie eine Präzedenzentscheidung finden?",
+    "placeholder": "Geben Sie hier Ihre Frage ein oder ziehen Sie ein Dokument...",
+    "disclaimer": "Hinweis: AI Assistant dient nur zu Informationszwecken; Es ist kein Ersatz für eine Rechtsberatung."
+  },
+  "contact": {
+    "title": "Kommunikation",
+    "desc": "Wir sind hier, um Sie bei Ihren rechtlichen Prozessen bestmöglich zu unterstützen. Sie können uns über das untenstehende Formular oder die Kommunikationskanäle kontaktieren.",
+    "heroTitle1": "Kontaktieren Sie uns",
+    "heroTitle2": "passieren",
+    "phoneLabel": "Telefon",
+    "phoneDesc": "Für einen Termin und ein Vorgespräch können Sie werktags zwischen 09:00 und 18:00 Uhr anrufen.",
+    "emailLabel": "E-Mail",
+    "emailDesc": "Schreiben Sie uns für die Einreichung von Dateien und detaillierte Fragen. Wir melden uns spätestens innerhalb von 24 Stunden bei Ihnen.",
+    "whatsappLabel": "WhatsApp-Unterstützung",
+    "whatsappDesc": "Unsere WhatsApp-Hotline ist für dringende rechtliche Unterstützung oder die schnelle Einreichung von Dokumenten aktiv.",
+    "whatsappBtn": "Gehen Sie zu WhatsApp"
+  }
+}
